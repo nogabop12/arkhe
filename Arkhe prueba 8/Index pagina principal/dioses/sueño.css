@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #09080d;
+    color: #e8e2ef;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+nav {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(5, 4, 8, 0.95);
+    border-bottom: 1px solid rgba(180, 154, 216, 0.18);
+    position: relative;
+    z-index: 20;
+}
+
+.logo {
+    color: #b49ad8;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #aaa3b2;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #b49ad8;
+}
+
+.hero {
+    height: 90vh;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.video-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at center, rgba(180, 154, 216, 0.18), rgba(9, 8, 13, 0.88) 68%),
+        linear-gradient(to bottom, rgba(5, 4, 8, 0.25), #09080d);
+    z-index: 1;
+}
+
+.sueno-figura {
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    border: 1px solid rgba(180, 154, 216, 0.35);
+    border-radius: 50%;
+    box-shadow:
+        0 0 50px rgba(180, 154, 216, 0.14),
+        inset 0 0 50px rgba(180, 154, 216, 0.08);
+    z-index: 2;
+}
+
+.sueno-figura::before,
+.sueno-figura::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(180, 154, 216, 0.2);
+}
+
+.sueno-figura::before {
+    width: 290px;
+    height: 290px;
+    top: 50px;
+    left: 50px;
+}
+
+.sueno-figura::after {
+    width: 170px;
+    height: 170px;
+    top: 110px;
+    left: 110px;
+    box-shadow: 0 0 35px rgba(180, 154, 216, 0.15);
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 30px;
+}
+
+.pre-titulo,
+.etiqueta {
+    color: #b49ad8;
+    font-size: 0.78rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    margin: 15px 0;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    letter-spacing: 8px;
+    color: #f1ebf7;
+    text-shadow: 0 0 25px rgba(180, 154, 216, 0.25);
+}
+
+.subtitulo {
+    color: #cfc2dc;
+    font-size: 1.15rem;
+    letter-spacing: 3px;
+}
+
+main {
+    overflow: hidden;
+}
+
+.introduccion,
+.contenido,
+.relacion,
+.secreto,
+.luna {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 30px;
+}
+
+.introduccion {
+    text-align: center;
+}
+
+.introduccion h2,
+.contenido h2,
+.relacion h2,
+.secreto h2,
+.luna h2 {
+    margin: 12px 0 20px;
+    color: #eee8f2;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 3px;
+}
+
+.linea {
+    width: 70px;
+    height: 1px;
+    background: #b49ad8;
+    margin: 0 auto 35px;
+    box-shadow: 0 0 12px rgba(180, 154, 216, 0.5);
+}
+
+.introduccion p:not(.etiqueta),
+.relacion p,
+.luna > p:not(.etiqueta),
+.secreto p {
+    max-width: 800px;
+    margin: 18px auto;
+    color: #aaa3b2;
+}
+
+.contenido {
+    text-align: center;
+    background: radial-gradient(circle, rgba(180, 154, 216, 0.045), transparent 65%);
+}
+
+.tarjetas {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.tarjeta {
+    padding: 35px 25px;
+    min-height: 240px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(180, 154, 216, 0.16);
+    transition: 0.35s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: rgba(180, 154, 216, 0.55);
+    background: rgba(180, 154, 216, 0.055);
+    box-shadow: 0 15px 40px rgba(180, 154, 216, 0.08);
+}
+
+.tarjeta span,
+.habilidades span {
+    color: #b49ad8;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.tarjeta h3,
+.lado h3,
+.habilidades h3 {
+    margin: 20px 0 12px;
+    color: #e9e1ef;
+    letter-spacing: 2px;
+}
+
+.tarjeta p,
+.lado p,
+.habilidades p {
+    color: #99929f;
+    font-size: 0.9rem;
+}
+
+.relacion {
+    border-top: 1px solid rgba(180, 154, 216, 0.08);
+    border-bottom: 1px solid rgba(180, 154, 216, 0.08);
+}
+
+.bloque {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.secreto {
+    text-align: center;
+}
+
+.dualidad {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.lado {
+    padding: 45px 35px;
+    border: 1px solid rgba(180, 154, 216, 0.18);
+    background: linear-gradient(145deg, rgba(180, 154, 216, 0.06), rgba(255, 255, 255, 0.01));
+}
+
+.lado.oscuro {
+    background: linear-gradient(145deg, rgba(30, 23, 40, 0.7), rgba(10, 8, 14, 0.9));
+}
+
+.lado span {
+    color: #b49ad8;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+}
+
+.luna {
+    text-align: center;
+}
+
+.habilidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.habilidades > div {
+    padding: 35px 25px;
+    border-top: 1px solid rgba(180, 154, 216, 0.3);
+    text-align: left;
+}
+
+.estado {
+    padding: 100px 30px;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(180, 154, 216, 0.13), transparent 55%),
+        #07060a;
+    border-top: 1px solid rgba(180, 154, 216, 0.12);
+    border-bottom: 1px solid rgba(180, 154, 216, 0.12);
+}
+
+.estado span {
+    color: #b49ad8;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+}
+
+.estado h2 {
+    margin: 15px 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #eee8f2;
+    letter-spacing: 4px;
+}
+
+.estado p {
+    color: #8f8995;
+}
+
+.volver {
+    display: block;
+    width: fit-content;
+    margin: 70px auto;
+    color: #b49ad8;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.volver:hover {
+    color: #e2d5ed;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 900px) {
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .habilidades {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .sueno-figura {
+        width: 300px;
+        height: 300px;
+    }
+
+    .sueno-figura::before {
+        width: 220px;
+        height: 220px;
+        top: 40px;
+        left: 40px;
+    }
+
+    .sueno-figura::after {
+        width: 130px;
+        height: 130px;
+        top: 85px;
+        left: 85px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: 4px;
+    }
+
+    .tarjetas,
+    .dualidad {
+        grid-template-columns: 1fr;
+    }
+
+    .introduccion,
+    .contenido,
+    .relacion,
+    .secreto,
+    .luna {
+        padding: 80px 22px;
+    }
+}

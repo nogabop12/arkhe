@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050509;
+    color: #d0d4db;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+nav {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    background: rgba(5, 5, 9, 0.96);
+    border-bottom: 1px solid rgba(197, 201, 209, 0.15);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: #c5c9d1;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #8d9097;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c5c9d1;
+}
+
+.hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: #050509;
+}
+
+.video-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            rgba(3, 3, 8, 0.35),
+            rgba(3, 3, 8, 0.88)
+        );
+    z-index: 1;
+}
+
+.luna-hero {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 35% 35%,
+        #f0f1f4,
+        #c5c9d1 45%,
+        #858a94 70%,
+        #363940 100%
+    );
+    box-shadow:
+        0 0 40px rgba(197, 201, 209, 0.25),
+        0 0 100px rgba(197, 201, 209, 0.1);
+    opacity: 0.16;
+    z-index: 1;
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+.pre-titulo {
+    color: #9ca1aa;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: #e2e4e8;
+    font-size: clamp(45px, 7vw, 90px);
+    letter-spacing: 8px;
+    font-weight: normal;
+    text-shadow: 0 0 25px rgba(197, 201, 209, 0.25);
+}
+
+.subtitulo {
+    color: #aeb3bc;
+    font-size: 19px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+main {
+    width: min(1200px, 90%);
+    margin: auto;
+    padding: 70px 0;
+}
+
+.volver,
+.volver-final {
+    display: inline-block;
+    color: #9fa4ad;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.volver:hover,
+.volver-final:hover {
+    color: #e0e2e6;
+}
+
+.introduccion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    margin: 80px 0 140px;
+}
+
+.imagen {
+    position: relative;
+}
+
+.imagen img {
+    width: 100%;
+    display: block;
+    filter: grayscale(25%);
+    border: 1px solid rgba(197, 201, 209, 0.2);
+}
+
+.texto .etiqueta,
+.estado .etiqueta {
+    color: #9da2aa;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.texto h2,
+.estado h2 {
+    color: #e0e2e6;
+    font-size: 38px;
+    font-weight: normal;
+    margin: 15px 0 25px;
+}
+
+.texto p,
+.contenido-mortales p,
+.mandatos-contenido p,
+.estado p {
+    color: #8f939b;
+    margin-bottom: 20px;
+}
+
+.titulo-seccion {
+    margin-bottom: 45px;
+}
+
+.titulo-seccion span {
+    color: #777c85;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.titulo-seccion h2 {
+    color: #d8dbe0;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-top: 8px;
+}
+
+.rivalidad,
+.mortales,
+.mandatos,
+.guerra {
+    margin-bottom: 140px;
+}
+
+.rivalidad-grid,
+.guerra-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.rival,
+.guerra-card {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(197, 201, 209, 0.12);
+    padding: 40px;
+    transition: 0.35s;
+}
+
+.rival:hover,
+.guerra-card:hover {
+    border-color: rgba(197, 201, 209, 0.4);
+    transform: translateY(-5px);
+}
+
+.rival span,
+.guerra-card span {
+    color: #858a94;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.rival h3,
+.guerra-card h3 {
+    color: #d9dce1;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 12px 0 15px;
+}
+
+.rival p,
+.guerra-card p {
+    color: #858991;
+}
+
+.luna-card {
+    box-shadow: inset 0 2px 0 rgba(197, 201, 209, 0.35);
+}
+
+.sol-card {
+    box-shadow: inset 0 2px 0 rgba(240, 223, 156, 0.25);
+}
+
+.contenido-mortales,
+.mandatos-contenido {
+    max-width: 850px;
+}
+
+.guerra-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.estado {
+    border-top: 1px solid rgba(197, 201, 209, 0.15);
+    border-bottom: 1px solid rgba(197, 201, 209, 0.15);
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 1fr 100px 1.5fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.estado-linea {
+    height: 1px;
+    background: rgba(197, 201, 209, 0.3);
+}
+
+.estado p {
+    margin: 0;
+}
+
+.volver-final {
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .menu {
+        gap: 15px;
+    }
+
+    .introduccion {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .guerra-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .estado {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .estado-linea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 0 4%;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .luna-hero {
+        width: 230px;
+        height: 230px;
+    }
+
+    .rivalidad-grid,
+    .guerra-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 88%;
+    }
+}

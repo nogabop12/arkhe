@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #d5d5d5;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+nav {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #060606;
+    border-bottom: 1px solid #252525;
+    position: relative;
+    z-index: 20;
+}
+
+.logo {
+    color: #777;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+.hero {
+    height: 90vh;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.video-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: grayscale(0.7) brightness(0.45);
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.55),
+            rgba(5, 5, 5, 0.75) 65%,
+            #080808 100%
+        );
+    z-index: 1;
+}
+
+.muerte-hero {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border: 1px solid rgba(120, 120, 120, 0.2);
+    border-radius: 50%;
+    box-shadow:
+        0 0 80px rgba(0, 0, 0, 0.8),
+        inset 0 0 80px rgba(100, 100, 100, 0.05);
+    z-index: 2;
+}
+
+.muerte-hero::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border: 1px solid rgba(120, 120, 120, 0.15);
+    border-radius: 50%;
+    top: 69px;
+    left: 69px;
+}
+
+.muerte-hero::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border: 1px solid rgba(150, 150, 150, 0.15);
+    border-radius: 50%;
+    top: 144px;
+    left: 144px;
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 30px;
+}
+
+.pre-titulo {
+    color: #777;
+    letter-spacing: 5px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.contenido-hero h1 {
+    color: #e0e0e0;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    letter-spacing: 8px;
+    font-weight: normal;
+    text-shadow: 0 0 30px rgba(180, 180, 180, 0.15);
+}
+
+.subtitulo {
+    margin-top: 20px;
+    color: #888;
+    letter-spacing: 3px;
+    font-size: 1rem;
+}
+
+.contenido {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+.introduccion {
+    padding: 110px 0 80px;
+    max-width: 850px;
+}
+
+.numero {
+    color: #555;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+}
+
+h2 {
+    color: #ddd;
+    font-weight: normal;
+    letter-spacing: 4px;
+    font-size: 2rem;
+    margin: 15px 0 25px;
+}
+
+.introduccion p,
+.seccion > p,
+.texto p {
+    color: #888;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.separador {
+    width: 100%;
+    height: 1px;
+    background: #222;
+}
+
+.seccion {
+    padding: 100px 0;
+}
+
+.etiqueta {
+    color: #666 !important;
+    letter-spacing: 4px;
+    font-size: 0.7rem;
+}
+
+.tarjetas {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.tarjeta {
+    background: #0d0d0d;
+    border: 1px solid #222;
+    padding: 35px 25px;
+    min-height: 250px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    border-color: #555;
+    transform: translateY(-5px);
+    background: #111;
+}
+
+.icono {
+    color: #666;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.tarjeta h3 {
+    color: #bbb;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin: 30px 0 15px;
+}
+
+.tarjeta p {
+    color: #777;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.mortales {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.frase {
+    border-left: 1px solid #555;
+    padding: 35px;
+}
+
+.frase span {
+    color: #555;
+    font-size: 4rem;
+    line-height: 0;
+}
+
+.frase p {
+    color: #aaa;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.luna {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.texto-centro {
+    max-width: 800px;
+}
+
+.alianza {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.punto {
+    padding: 30px;
+    border-top: 1px solid #333;
+}
+
+.punto span {
+    color: #666;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.punto h3 {
+    color: #aaa;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin: 20px 0 12px;
+}
+
+.punto p {
+    color: #777;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.pacto {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.pacto-box {
+    margin: 50px auto 0;
+    padding: 45px;
+    border: 1px solid #333;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(100, 100, 100, 0.08),
+            transparent 70%
+        );
+}
+
+.pacto-box span {
+    color: #666;
+    letter-spacing: 4px;
+    font-size: 0.7rem;
+}
+
+.pacto-box h3 {
+    color: #ccc;
+    font-size: 1.8rem;
+    font-weight: normal;
+    letter-spacing: 5px;
+    margin: 20px 0 12px;
+}
+
+.pacto-box p {
+    color: #777;
+}
+
+.estado {
+    padding: 100px 0 120px;
+    text-align: center;
+}
+
+.estado p {
+    color: #555;
+    letter-spacing: 4px;
+    font-size: 0.7rem;
+}
+
+.estado h2 {
+    color: #aaa;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.estado .linea {
+    width: 70px;
+    height: 1px;
+    background: #555;
+    margin: auto;
+}
+
+.estado span {
+    display: block;
+    color: #666;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+}
+
+footer {
+    padding: 35px 7%;
+    border-top: 1px solid #222;
+    text-align: center;
+}
+
+footer a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #aaa;
+}
+
+@media (max-width: 850px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 0.65rem;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .muerte-hero {
+        width: 350px;
+        height: 350px;
+    }
+
+    .muerte-hero::before {
+        width: 260px;
+        height: 260px;
+        top: 44px;
+        left: 44px;
+    }
+
+    .muerte-hero::after {
+        width: 160px;
+        height: 160px;
+        top: 94px;
+        left: 94px;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mortales {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .alianza {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    nav {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenido-hero h1 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .subtitulo {
+        font-size: 0.75rem;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 70px 0;
+    }
+}

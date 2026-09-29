@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.84)),
+        url("../fondo.png") center center / cover fixed no-repeat;
+}
+
+
+/* NAVEGACIÓN */
+
+nav {
+    width: 100%;
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+/* CONTENEDOR */
+
+.historia-page {
+    width: min(1100px, 90%);
+    margin: 70px auto;
+}
+
+
+/* INTRODUCCIÓN */
+
+.introduccion {
+    padding: 70px 60px;
+    margin-bottom: 45px;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.introduccion h1 {
+    margin-bottom: 30px;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 7px;
+}
+
+.introduccion p {
+    max-width: 800px;
+    margin: 0 auto 18px;
+    color: #cfcfcf;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.introduccion p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* SECCIONES */
+
+.seccion {
+    margin-bottom: 45px;
+    padding: 50px;
+    background: rgba(10, 10, 10, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+.seccion h2 {
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.seccion p {
+    margin-bottom: 22px;
+    color: #cfcfcf;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.seccion p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* TARJETAS DEL SIGNIFICADO */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.tarjeta {
+    padding: 30px 25px;
+    min-height: 220px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    background: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+}
+
+.tarjeta h3 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* FRASE DESTACADA */
+
+.frase-destacada {
+    margin-top: 35px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.035);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.frase-destacada p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+
+/* CITAS */
+
+blockquote {
+    margin: 30px 0;
+    padding: 25px 30px;
+    color: #e0e0e0;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.035);
+    border-left: 3px solid rgba(255, 255, 255, 0.45);
+}
+
+
+/* SEPARADOR */
+
+.separador {
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* VERDAD OCULTA */
+
+.secreto {
+    background:
+        linear-gradient(
+            rgba(7, 7, 7, 0.94),
+            rgba(12, 12, 12, 0.94)
+        );
+}
+
+.secreto h2 {
+    color: #e4e4e4;
+}
+
+.frase-final {
+    margin-top: 45px;
+    padding: 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.025);
+    bord
+}

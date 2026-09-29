@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #080808;
+    color: #e8e3d9;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("arkhe.png");
+    background-position: center;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    opacity: 0.06;
+    z-index: -2;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(35, 31, 25, 0.3),
+        rgba(8, 8, 8, 0.97) 75%
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+nav {
+    width: 100%;
+    min-height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(9, 9, 9, 0.96);
+    border-bottom: 1px solid #292722;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: #d6b56e;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    color: #aaa59c;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #d6b56e;
+}
+
+header {
+    width: 100%;
+    min-height: 420px;
+    padding: 110px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #30291f 0%,
+            #151310 35%,
+            #080808 78%
+        );
+    border-bottom: 1px solid #292722;
+}
+
+.pre-titulo {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #8f7950;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+header h1 {
+    width: 100%;
+    margin: 0;
+    color: #d6b56e;
+    font-size: clamp(60px, 10vw, 120px);
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+.descripcion {
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto 0;
+    color: #aaa59c;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    padding: 70px 0 100px;
+}
+
+.personajes {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.personaje {
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+    display: block;
+    background: #10100f;
+    border: 1px solid #292722;
+    color: #e8e3d9;
+    text-decoration: none;
+    transition:
+        transform 0.35s,
+        border-color 0.35s,
+        box-shadow 0.35s;
+}
+
+.personaje:hover {
+    transform: translateY(-8px);
+    border-color: #8f7950;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.imagen {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #11100e;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition:
+        transform 0.6s,
+        filter 0.6s;
+}
+
+.personaje:hover .imagen img {
+    transform: scale(1.07);
+    filter: brightness(0.8);
+}
+
+.imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.05) 20%,
+            rgba(0, 0, 0, 0.15) 40%,
+            rgba(8, 8, 8, 0.85) 78%,
+            rgba(8, 8, 8, 0.98) 100%
+        );
+}
+
+.info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 28px;
+    z-index: 2;
+}
+
+.info h2 {
+    margin-bottom: 8px;
+    color: #e8e3d9;
+    font-size: 23px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.estado {
+    display: block;
+    color: #8f7950;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.ver-mas {
+    display: block;
+    margin-top: 16px;
+    color: #d6b56e;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: 0.3s;
+}
+
+.personaje:hover .ver-mas {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1100px) {
+    .personajes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .personajes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .personaje {
+        height: 360px;
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header {
+        min-height: 360px;
+        padding: 80px 20px 65px;
+    }
+
+    header h1 {
+        font-size: 55px;
+        letter-spacing: 8px;
+    }
+
+    .descripcion {
+        font-size: 15px;
+    }
+
+    main {
+        padding: 50px 0 80px;
+    }
+
+    .personajes {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .personaje {
+        height: 420px;
+    }
+}

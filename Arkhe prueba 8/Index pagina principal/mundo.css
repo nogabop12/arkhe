@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.86)),
+        url("../fondo.png") center center / cover fixed no-repeat;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.mundo {
+    width: min(1100px, 90%);
+    margin: 70px auto;
+}
+
+.introduccion {
+    padding: 70px 60px;
+    margin-bottom: 45px;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.introduccion h1 {
+    margin-bottom: 30px;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 7px;
+}
+
+.introduccion p {
+    max-width: 800px;
+    margin: 0 auto 18px;
+    color: #cfcfcf;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.introduccion p:last-child {
+    margin-bottom: 0;
+}
+
+.seccion {
+    margin-bottom: 45px;
+    padding: 50px;
+    background: rgba(10, 10, 10, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+.seccion h2 {
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.seccion p {
+    margin-bottom: 22px;
+    color: #cfcfcf;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.seccion p:last-child {
+    margin-bottom: 0;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.tarjeta {
+    padding: 30px 25px;
+    min-height: 220px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    background: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+}
+
+.tarjeta h3 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.frase-destacada {
+    margin-top: 35px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.035);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.frase-destacada p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+blockquote {
+    margin: 30px 0;
+    padding: 25px 30px;
+    color: #e0e0e0;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.035);
+    border-left: 3px solid rgba(255, 255, 255, 0.45);
+}
+
+.separador {
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.secreto {
+    background:
+        linear-gradient(
+            rgba(7, 7, 7, 0.95),
+            rgba(12, 12, 12, 0.95)
+        );
+}
+
+.secreto h2 {
+    color: #e4e4e4;
+}
+
+.frase-final {
+    margin-top: 45px;
+    padding: 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.frase-final p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 22px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.actualidad {
+    position: relative;
+}
+
+.amenaza {
+    margin-top: 35px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.amenaza h3 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.amenaza p {
+    margin: 0;
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+footer {
+    width: 100%;
+    padding: 35px;
+    margin-top: 80px;
+    text-align: center;
+    background: rgba(8, 8, 8, 0.92);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+footer p {
+    color: #777777;
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+
+@media (max-width: 850px) {
+
+    nav {
+        height: auto;
+        padding: 22px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mundo {
+        width: 92%;
+        margin: 40px auto;
+    }
+
+    .introduccion {
+        padding: 50px 35px;
+    }
+
+    .introduccion h1 {
+        font-size: 31px;
+    }
+
+    .seccion {
+        padding: 35px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .mundo {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .introduccion {
+        padding: 40px 22px;
+    }
+
+    .introduccion h1 {
+        font-size: 25px;
+        letter-spacing: 4px;
+    }
+
+    .introduccion p {
+        font-size: 14px;
+    }
+
+    .seccion {
+        padding: 25px 20px;
+    }
+
+    .seccion h2 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .seccion p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    blockquote {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .frase-destacada {
+        padding: 22px;
+    }
+
+    .frase-destacada p {
+        font-size: 15px;
+    }
+
+    .frase-final {
+        padding: 25px 15px;
+    }
+
+    .frase-final p {
+        font-size: 18px;
+    }
+
+    .amenaza {
+        padding: 25px 18px;
+    }
+
+    .amenaza h3 {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+}
