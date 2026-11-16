@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0d0914;
+    color: #ebd7fc;
+    font-family: "Segoe UI", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(179, 136, 225, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(179, 136, 225, 0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    z-index: -1;
+}
+
+
+/* ============================= */
+/* NAVEGACIÓN */
+/* ============================= */
+
+nav {
+    width: 100%;
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(193, 153, 234, 0.15);
+    background: rgba(13, 9, 20, 0.94);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: #f1e2fd;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu a {
+    color: #a97bdb;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #cfadf1;
+}
+
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero {
+    min-height: 620px;
+    padding: 110px 8% 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border: 1px solid rgba(196, 158, 236, 0.08);
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border: 1px solid rgba(212, 180, 243, 0.07);
+    border-radius: 50%;
+}
+
+.simbolo {
+    width: 190px;
+    height: 190px;
+    margin-bottom: 55px;
+    position: relative;
+    border: 1px solid rgba(204, 169, 239, 0.38);
+    border-radius: 50%;
+    box-shadow:
+        0 0 70px rgba(193, 154, 234, 0.08),
+        inset 0 0 45px rgba(193, 154, 234, 0.06);
+}
+
+.simbolo::before {
+    content: "";
+    position: absolute;
+    inset: 30px;
+    border: 1px solid rgba(204, 169, 239, 0.28);
+    border-radius: 50%;
+}
+
+.simbolo::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: calc(50% - 22px);
+    top: calc(50% - 22px);
+    border: 1px solid rgba(221, 191, 247, 0.4);
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(201, 165, 238, 0.15);
+}
+
+.pre-titulo {
+    color: #b084e0;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: #f2e5fd;
+    font-size: clamp(42px, 7vw, 88px);
+    font-weight: 300;
+    letter-spacing: 8px;
+    line-height: 1.1;
+}
+
+.subtitulo {
+    margin-top: 25px;
+    color: #b287e1;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+
+/* ============================= */
+/* CONTENIDO */
+/* ============================= */
+
+main {
+    width: min(1100px, 84%);
+    margin: 0 auto;
+}
+
+.volver,
+.volver-final {
+    display: inline-block;
+    color: #b388e2;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.volver {
+    margin-bottom: 100px;
+}
+
+.volver:hover,
+.volver-final:hover {
+    color: #ecd8fc;
+    transform: translateX(-5px);
+}
+
+
+/* ============================= */
+/* INTRODUCCIÓN */
+/* ============================= */
+
+.introduccion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 160px;
+}
+
+.imagen {
+    position: relative;
+}
+
+.imagen::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    border: 1px solid rgba(196, 158, 236, 0.15);
+    z-index: -1;
+}
+
+.imagen img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    filter: saturate(0.65) brightness(0.78);
+}
+
+.etiqueta {
+    color: #b084e0;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.texto h2 {
+    color: #f0e0fd;
+    font-size: 38px;
+    font-weight: 300;
+    margin: 20px 0 30px;
+    line-height: 1.15;
+}
+
+.texto p,
+.contenido-historia p,
+.contenido-santuario p,
+.estado p {
+    color: #a97bda;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+
+/* ============================= */
+/* SECCIONES */
+/* ============================= */
+
+.historia,
+.santuario,
+.dominios {
+    margin-bottom: 150px;
+}
+
+.titulo-seccion {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.titulo-seccion span {
+    color: #9c6ad2;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    color: #ead5fb;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.contenido-historia,
+.contenido-santuario {
+    max-width: 760px;
+    margin-left: 70px;
+}
+
+.contenido-historia p:last-child,
+.contenido-santuario p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================= */
+/* DOMINIOS */
+/* ============================= */
+
+.aspectos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(196, 158, 236, 0.12);
+    border-bottom: 1px solid rgba(196, 158, 236, 0.12);
+}
+
+.aspecto {
+    padding: 40px 25px;
+    border-right: 1px solid rgba(196, 158, 236, 0.12);
+}
+
+.aspecto:last-child {
+    border-right: none;
+}
+
+.aspecto > span {
+    color: #9c6ad2;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.aspecto h3 {
+    color: #ead4fb;
+    font-size: 19px;
+    font-weight: 400;
+    margin: 20px 0 15px;
+}
+
+.aspecto p {
+    color: #a06fd4;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ============================= */
+/* ESTADO */
+/* ============================= */
+
+.estado {
+    margin: 80px 0 140px;
+    padding: 90px 15%;
+    text-align: center;
+    border-top: 1px solid rgba(196, 158, 236, 0.12);
+    border-bottom: 1px solid rgba(196, 158, 236, 0.12);
+}
+
+.estado h2 {
+    color: #ecd8fc;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin: 25px 0;
+}
+
+.estado-linea {
+    width: 80px;
+    height: 1px;
+    margin: 0 auto 30px;
+    background: rgba(200, 163, 237, 0.45);
+}
+
+.estado p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* ============================= */
+/* FINAL */
+/* ============================= */
+
+.volver-final {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 100px;
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    main {
+        width: 88%;
+    }
+
+    .introduccion {
+        gap: 50px;
+    }
+
+    .imagen img {
+        height: 450px;
+    }
+
+    .aspectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aspecto:nth-child(2) {
+        border-right: none;
+    }
+
+    .aspecto:nth-child(1),
+    .aspecto:nth-child(2) {
+        border-bottom: 1px solid rgba(196, 158, 236, 0.12);
+    }
+
+}
+
+
+/* ============================= */
+/* CELULAR */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        height: auto;
+        min-height: 70px;
+        padding: 18px 20px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .menu a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 80px 20px;
+    }
+
+    .hero::before {
+        width: 450px;
+        height: 450px;
+    }
+
+    .hero::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .simbolo {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 45px;
+    }
+
+    .simbolo::before {
+        inset: 22px;
+    }
+
+    .simbolo::after {
+        width: 32px;
+        height: 32px;
+        left: calc(50% - 16px);
+        top: calc(50% - 16px);
+    }
+
+    .pre-titulo {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+        letter-spacing: 4px;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    main {
+        width: 88%;
+    }
+
+    .volver {
+        margin-bottom: 70px;
+    }
+
+    .introduccion {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        margin-bottom: 110px;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+    .imagen img {
+        height: 380px;
+    }
+
+    .texto h2 {
+        font-size: 30px;
+    }
+
+    .texto p,
+    .contenido-historia p,
+    .contenido-santuario p,
+    .estado p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .historia,
+    .santuario,
+    .dominios {
+        margin-bottom: 110px;
+    }
+
+    .titulo-seccion {
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .contenido-historia,
+    .contenido-santuario {
+        margin-left: 0;
+    }
+
+    .aspectos {
+        grid-template-columns: 1fr;
+    }
+
+    .aspecto {
+        border-right: none;
+        border-bottom: 1px solid rgba(196, 158, 236, 0.12);
+    }
+
+    .aspecto:last-child {
+        border-bottom: none;
+    }
+
+    .estado {
+        margin: 50px 0 100px;
+        padding: 65px 20px;
+    }
+
+    .estado h2 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .volver-final {
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+}
+
+.imagen-fallback { display:flex; width:100%; height:100%; min-height:220px; flex-direction:column; align-items:center; justify-content:center; gap:.6rem; color:#dfc2f8; background:radial-gradient(circle at center,rgba(204, 169, 239,.16),transparent 58%),linear-gradient(145deg,#241436,#130c1d); border:1px solid rgba(181, 138, 227,.22); }
+.imagen-fallback span { font:clamp(2rem,7vw,4rem) Georgia,serif; letter-spacing:.08em; }
+.imagen-fallback small { color:#c9a5ee; font:600 .65rem/1.4 Arial,sans-serif; letter-spacing:.14em; }

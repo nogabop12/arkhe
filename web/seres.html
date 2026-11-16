@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkhe | Seres</title>
+    <meta name="description" content="Descubre las criaturas, creencias y entidades que habitan el mundo de Arkhe.">
+    <link rel="stylesheet" href="seres.css">
+    <link rel="stylesheet" href="accesibilidad.css">
+    <link rel="stylesheet" href="funciones.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="icon" type="image/png" href="arkhe.png">
+    <link rel="stylesheet" href="arkhe-compartido.css">
+</head>
+<body class="pagina-seres">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+    <nav aria-label="Navegación principal">
+        <a href="index.html" class="logo">ARKHE</a>
+
+        <div class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="dioses.html">Dioses</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="seres.html" aria-current="page">Seres</a>
+            <a href="fanarts.html">Fanarts</a>
+            <a href="leyes.html">Leyes</a>
+            <a href="mundo.html">Mundo</a>
+            <a href="historia.html">Historia</a>
+            <a href="calendario.html">Calendario</a>
+        </div>
+    </nav>
+
+    <header class="encabezado">
+        <div>
+            <p class="pre-titulo">BESTIARIO DE ARKHE</p>
+            <h1>Seres</h1>
+            <p class="descripcion">Entidades de la Gran Ley, seres de magia prohibida, mitos y especies jugables.</p>
+        </div>
+        <div class="seres-sello" aria-hidden="true"><img src="arkhe.png" alt=""></div>
+    </header>
+
+    <main id="contenido-principal" tabindex="-1">
+
+<div class="catalogo-controles" data-catalog="seres" role="search" aria-label="Buscar y filtrar seres" hidden>
+    <label for="buscar-seres">Buscar en el bestiario
+        <input id="buscar-seres" type="search" data-query placeholder="Ej.: Luna, necromancia, ecos" autocomplete="off">
+    </label>
+    <label for="filtrar-seres">Filtrar por sección
+        <select id="filtrar-seres" data-category><option value="todos">Todas las secciones</option><option value="necromancia">Necromancia sagrada</option><option value="gran-ley">Gran Ley</option><option value="creencias">Creencias y mitos</option><option value="especies-jugables">Especies jugables</option></select>
+    </label>
+    <p class="catalogo-resultado" data-count aria-live="polite"></p>
+    <p class="catalogo-resultado" data-empty data-filtro-vacio hidden>No encontramos entradas que coincidan con la búsqueda.</p>
+</div>
+
+        <section class="categorias" aria-label="Secciones del bestiario">
+    <a href="#criaturas"><div><h2>Criaturas</h2><p>Sección cerrada temporalmente</p></div></a>
+    <a href="#necromancia"><div><h2>Necromancia Sagrada</h2><p>Seres de magia prohibida</p></div></a>
+    <a href="#gran-ley"><div><h2>Gran Ley</h2><p>Entidades del orden universal</p></div></a>
+    <a href="#creencias"><div><h2>Creencias</h2><p>Mitos, cultos y religiones</p></div></a>
+    <a href="#especies-jugables"><div><h2>Especies jugables</h2><p>Opciones para interpretar personajes</p></div></a>
+    <a href="#glosario"><div><h2>Glosario</h2><p>Términos de Arkhe</p></div></a>
+</section>
+
+
+
+
+        <section class="categoria" id="necromancia">
+
+            <div class="titulo-categoria">
+                
+                <div>
+                    <p>CLASIFICACIÓN</p>
+                    <h2>Necromancia sagrada</h2>
+                </div>
+            </div>
+
+            <p class="texto-categoria">
+                Seres de magia prohibida que desafían el ciclo natural de la
+                muerte mediante la reanimación de cuerpos, el sellado de almas
+                o la intervención divina. A diferencia de la necromancia común,
+                estas aberraciones no siempre nacen de la maldad, sino de la
+                influencia de deidades, sentimientos humanos inquebrantables
+                o del uso de recipientes artificiales.
+            </p>
+
+            <div class="seres">
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>Revenant</h3>
+                        <p>
+                            Cadáver reanimado que mantiene su propio cuerpo
+                            físico, marchito o putrefacto, y viste la ropa con
+                            la que fue enterrado.
+                        </p>
+                        <p>
+                            Está impulsado por un sentimiento sumamente
+                            poderoso, como una sed de venganza implacable,
+                            cumplir una promesa solemne o terminar una tarea
+                            crucial que dejó inconclusa.
+                        </p>
+                        <p>
+                            Si es impulsado por un Dios, adquiere habilidades
+                            divinas, aunque nunca alcanza el poder de la
+                            deidad que lo impulsa.
+                        </p>
+                        <strong>Ejemplo: El Rey de la Nada</strong>
+                    </div>
+                </article>
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>Vessel</h3>
+                        <p>
+                            Cuando un cuerpo muere, puede quedar como un
+                            "envase vacío", libre de su alma original.
+                        </p>
+                        <p>
+                            Un culto puede utilizar su magia para reanimar el
+                            cuerpo e instalar en él un alma completamente
+                            ajena, convirtiéndolo en un Vessel.
+                        </p>
+                        <strong>Ejemplo: El cuerpo de Noga</strong>
+                    </div>
+                </article>
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>Occupant</h3>
+                        <p>
+                            Ser que habita o se aloja dentro del cuerpo de
+                            otro individuo. Al igual que un Revenant, suele
+                            estar impulsado por un sentimiento sumamente
+                            poderoso, siendo la venganza uno de los más
+                            comunes.
+                        </p>
+                        <p>
+                            Al tratarse de un "parásito" dentro de un cuerpo
+                            ajeno, posee menos habilidades que un Revenant.
+                        </p>
+                        <strong>Ejemplo: Eclipse</strong>
+                    </div>
+                </article>
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>Reliquias Vivientes</h3>
+                        <p>
+                            Armaduras sagradas rellenas exclusivamente de
+                            cenizas bendecidas y fragmentos de almas rotas
+                            pertenecientes a antiguos guerreros solares.
+                        </p>
+                        <p>
+                            No poseen carne en su interior. Son inmunes al
+                            dolor y a la corrupción, pero si su armadura se
+                            agrieta, el alma se evapora y el ser se desploma
+                            como un cascarón vacío.
+                        </p>
+
+                    </div>
+                </article>
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>Ecos del Azar</h3>
+                        <p>
+                            Cuando un ser muere a causa de la guerra, el Dios
+                            del Juego puede intervenir por pura diversión.
+                        </p>
+                        <p>
+                            El alma del muerto no viaja al más allá, sino que
+                            queda atrapada dentro de la dimensión del Dios
+                            del Azar.
+                        </p>
+                        <strong>Ejemplo: Noga</strong>
+                    </div>
+                </article>
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>Tejedores de Descanso</h3>
+                        <p>
+                            No atacan a los vivos ni buscan venganza. Son los
+                            espíritus de antiguos monjes o herbolarios
+                            sanadores que la Diosa de la Naturaleza reanima
+                            utilizando la madera de los sauces.
+                        </p>
+                        <p>
+                            Su propósito es servir como el "último consuelo"
+                            de los caídos.
+                        </p>
+
+                    </div>
+                </article>
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>Kobber Rustning</h3>
+                        <p>
+                            Tras ser creado a partir de un sacrificio, un alma
+                            humana es sellada dentro de una armadura de metal
+                            de cobre.
+                        </p>
+                        <p>
+                            El ser mantiene sus emociones y su mente, pero
+                            sufre la lenta parálisis provocada por la
+                            corrosión del cobre.
+                        </p>
+                        <p>
+                            A medida que el metal se cubre de pátina verde,
+                            las articulaciones se funden y se vuelven rígidas,
+                            condenando al ser a quedar inmóvil para siempre.
+                        </p>
+                        <strong>Ejemplo: Tanquesito</strong>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="categoria" id="gran-ley">
+
+            <div class="titulo-categoria">
+                
+                <div>
+                    <p>CLASIFICACIÓN</p>
+                    <h2>La Gran Ley</h2>
+                </div>
+            </div>
+
+            <p class="texto-categoria">
+                Entidades que funcionan como el mecanismo de control y el
+                sistema inmunológico del cosmos. No actúan bajo conceptos
+                morales de bien o mal, pecado o virtud. Su único propósito
+                es preservar la estabilidad dimensional y reparar los fallos
+                en el tejido de la realidad.
+            </p>
+
+            <div class="seres">
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>La Tejedora</h3>
+                        <p>
+                            A pesar de su estatus jerárquico como Diosa de las
+                            dimensiones y el destino, está clasificada
+                            estrictamente como una entidad operativa de la
+                            Gran Ley.
+                        </p>
+                        <p>
+                            Su función es mantener la "Telaraña Cósmica",
+                            el tejido que conecta todas las dimensiones.
+                            Por ello, no interviene en las vidas de los
+                            mortales bajo criterios morales.
+                        </p>
+                        <p>
+                            Cuando un ciclo se repite infinitamente, se genera
+                            un "nudo" o un grosor defectuoso en el hilo de la
+                            realidad correspondiente. Esto activa el sistema
+                            inmunológico del universo: los Ecos y la Biblioteca.
+                        </p>
+                        <p>
+                            Si el daño es provocado deliberadamente por un
+                            mortal que altera o cruza dimensiones, la deidad
+                            puede ejecutar una medida de eliminación biológica
+                            lenta conocida como el Síndrome de Desfase
+                            Interdimensional.
+                        </p>
+                        <p>
+                            La única forma de sobrevivir a esta purga es
+                            desatar el nudo causal utilizando la guía de los
+                            Ecos y el conocimiento de la Biblioteca.
+                        </p>
+                        <p>
+                            Existe un último y desesperado recurso: contactar
+                            directamente con su faceta de "Niña". Sin embargo,
+                            esta hazaña es casi imposible.
+                        </p>
+                        <p>
+                            Para ser escuchado, el mortal jamás debe suplicar
+                            por su vida o por la del afectado. La Niña no
+                            comprende la mortalidad y la sumisión le aburre.
+                            Esto puede despertar a la Araña y provocar el
+                            borrado absoluto del individuo en toda línea
+                            temporal.
+                        </p>
+                        <p>
+                            Para sobrevivir, el suplicante debe presentar un
+                            argumento de equivalencia matemática o lógica
+                            cósmica que demuestre que su existencia beneficia
+                            a la red, o bien entretenerla ganando en su
+                            "juego de muñecas cósmicas".
+                        </p>
+                    </div>
+                </article>
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>Ecos del Universo</h3>
+                        <p>
+                            No juzgan el pecado ni la virtud de las acciones
+                            mortales, sino únicamente la desviación del plano
+                            dimensional.
+                        </p>
+                        <p>
+                            Su aparición en el plano físico es un fenómeno de
+                            alta excepcionalidad y su propósito se limita
+                            estrictamente a la orientación existencial.
+                        </p>
+                        <p>
+                            Intervienen directamente únicamente cuando un
+                            individuo queda atrapado en un bucle infinito a
+                            través de múltiples dimensiones y reencarnaciones.
+                        </p>
+                        <p>
+                            Guían al sujeto para que logre romper
+                            definitivamente dicho ciclo. Sin embargo, por ley
+                            universal, jamás proporcionan las respuestas de
+                            forma directa. Actúan mediante acertijos, señales
+                            y metáforas.
+                        </p>
+                        <p>
+                            Ningún Eco es igual al de otro mortal. Su forma,
+                            voz y presencia se moldean de manera única a partir
+                            de la esencia y la psique del individuo afectado.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="ser">
+                    
+                    <div class="ser-contenido">
+                        <h3>La Biblioteca de los Ecos</h3>
+                        <p>
+                            Estructura metafísica anómala que carece de
+                            permanencia estática en la realidad.
+                        </p>
+                        <p>
+                            Su manifestación está ligada a la presencia y
+                            esencia de los Ecos, materializándose en el plano
+                            terrenal únicamente cuando estos son invocados
+                            para asistir a un alma atrapada en un bucle.
+                        </p>
+                        <p>
+                            Los libros de este espacio poseen una vida
+                            dinámica impulsada por la energía residual de la
+                            propia biblioteca.
+                        </p>
+                        <p>
+                            Los tomos mutan constantemente para transmitir
+                            el registro absoluto de las vidas del sujeto
+                            afectado, recopilando su existencia pasada,
+                            actual y de otras dimensiones alternas.
+                        </p>
+                        <p>
+                            La Biblioteca es la principal herramienta
+                            analítica de los Ecos para facilitar la resolución
+                            del nudo causal.
+                        </p>
+                        <p>
+                            Si el individuo fallece o el ciclo se reinicia
+                            sin haber roto el patrón, la estructura se
+                            disuelve por completo y todo acceso a la
+                            información desaparece.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="categoria" id="creencias">
+    <div class="titulo-categoria"><h2>Creencias y cultos</h2></div>
+    <p class="texto-categoria">Los relatos sobre la peste y la guerra expresan la postura de cada facción. Se presentan aquí como versiones que circulan dentro de Arkhe.</p>
+    <div class="seres">
+        <article class="ser"><div class="ser-contenido"><h3>El Fuego Purificador del Dios Sol</h3><p>Relato solar. Atribuye la peste de Frixx a la Luna y presenta la matanza ordenada por el Sol como una supuesta forma de detener el contagio.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>La Luna Maldita</h3><p>Relato solar. Acusa a la Luna de convertir a sus fieles en portadores de una maldición. Sus seguidores usan esa versión para justificar la persecución del culto.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>El Sacrificio de la Luna</h3><p>Relato lunar. Sostiene que la diosa contuvo su poder para proteger la isla y que aquello que la Corona llamó peste fue un bautismo destinado a mantener viva su memoria.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>El Infierno de las llamas del Sol</h3><p>Relato lunar. Acusa a la Iglesia de usar la cuarentena como pretexto para exterminar pueblos y mantener su dominio sobre la isla.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>El Ánima Mundi</h3><p>Leyenda marítima. Los relatos describen un barco fantasma al mando de Vandemar. Algunos pescadores hablan de melodías que atraen a los navegantes y de pasajeros que jamás regresan a su vida anterior.</p></div></article>
+<article class="ser" id="culto-de-la-luna"><div class="ser-contenido"><h3>Culto de la Luna</h3><p>Red secreta de células que predica la igualdad, la protección de los oprimidos y la justicia por la ley del talión. Ofrece refugio y apoyo a sus fieles.</p></div></article>
+<article class="ser" id="iglesia-del-sol"><div class="ser-contenido"><h3>Santa Iglesia del Sol</h3><p>Religión oficial y teocracia de Estado. Vincula la luz, el progreso y el orden con la legitimidad del trono. Sus fieles pueden obtener privilegios legales y cargos de poder.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>El Escudo Silencioso</h3><p>Sector civil sin autoridad religiosa propia. Sus integrantes buscan sobrevivir fuera de los bandos y respetan los ciclos naturales. La Diosa de la Naturaleza ampara su neutralidad.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>Organización de los cultos</h3><p>Los sacerdotes dirigen cada facción, los presbíteros custodian su doctrina y los diáconos sostienen su operación diaria. La asamblea reúne al resto de la congregación.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>El legado de Sira</h3><p>La primera reina de Arkhe impulsó la autoridad de las mujeres dentro de la Iglesia. La madre superiora puede asumir las funciones del sacerdote cuando el cargo queda vacante. Las vicarias reclutan y las monjas sostienen la labor de la orden.</p></div></article>
+    </div>
+</section>
+
+<section class="categoria" id="especies-jugables">
+    <div class="titulo-categoria"><h2>Especies jugables</h2></div>
+    <p class="texto-categoria">Opciones para interpretar personajes. Las hadas de las flores pertenecen a esta categoría y se distinguen de las hadas de luz de la fauna mágica.</p>
+    <div class="seres">
+        <article class="ser"><div class="ser-contenido"><h3>Elfos y elfas</h3><p>Fueron la primera especie inteligente moldeada por la Diosa de la Naturaleza. Destacan en magia curativa y de protección, tienen poca resistencia física y pueden vivir hasta 250 años.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>Morfagos</h3><p>Animales transformados en humanos por la Diosa de la Naturaleza. Conservan rasgos de su especie original y pueden aprender magia mediante estudio y práctica.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>Antropomorfos</h3><p>Descendientes de una estirpe animal bendecida por la Diosa de la Naturaleza. Tienen habla y raciocinio y conservan la anatomía de su especie, con reservas de maná muy bajas.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>Orcos</h3><p>Estirpe surgida de las rocas profundas y bendecida por el Dios del Comercio. Su fuerza les permite desempeñarse en oficios que requieren moldear materiales pesados.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>Duendes</h3><p>Surgieron de la magia del Bosque Encantado. Destacan por sus reflejos, su agilidad y su memoria numérica, y disponen de poco maná.</p></div></article>
+<article class="ser"><div class="ser-contenido"><h3>Hadas de las flores</h3><p>Nacen de flores y se especializan en magia curativa, herbolaria y encantamiento de alimentos. Son frágiles ante impactos y climas extremos.</p></div></article>
+    </div>
+</section>
+
+        <section class="categoria categoria-cerrada" id="criaturas"><h2>Criaturas mágicas</h2><p>Esta sección está cerrada temporalmente.</p></section>
+
+    <section class="funcion-seccion" id="glosario" aria-labelledby="titulo-glosario" data-glossary-search>
+    <h2 id="titulo-glosario">GLOSARIO DE ARKHE</h2>
+    <p class="funcion-intro">Términos del mundo y las leyes, resumidos a partir de los relatos publicados.</p>
+    <div class="glosa-controls" role="search" aria-label="Buscar en el glosario" hidden><label for="buscar-glosario">Buscar un término <input id="buscar-glosario" type="search" data-query placeholder="Ej.: arkhé, Verdania, pacto" autocomplete="off"></label><p class="catalogo-resultado" data-count aria-live="polite"></p><p data-empty hidden>No encontramos ese término.</p></div>
+    <div class="glosa-grid">
+        <article class="glosa-entrada" data-glossary-entry><h3>Arkhé</h3><p>Principio, sustento y ley de todas las cosas; expresa el origen y el orden del universo. <a href="historia.html#concepto-arkhe">Leer sobre el arkhé</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Arkheanos</h3><p>Nombre dado a los habitantes del reino fundado por el Rey X en la isla. <a href="mundo.html#habitantes">Ver los pueblos de Arkhe</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Verdania</h3><p>Pueblo originario de la isla, ligado al árbol divino y presente antes de la llegada de los Arkheanos. <a href="mundo.html#habitantes">Ver su historia</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Árbol divino</h3><p>Árbol extraordinario que el Rey X descubrió en 1527 y que ya formaba parte de la vida de los Verdania. <a href="historia.html#origen-reino">Leer sobre su descubrimiento</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Trinidad</h3><p>Nombre colectivo de las deidades superiores que sometieron al Sol y a la Luna al final de la guerra. <a href="historia.html#verdad-oculta">Leer la verdad oculta</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Mandatos Reales</h3><p>Leyes que limitan la intervención directa de las deidades y las obligan a cumplir sus funciones. <a href="leyes.html">Consultar las leyes</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Gran Ley</h3><p>Orden cósmico que reúne libre albedrío, intercambio equivalente y no interferencia divina. <a href="leyes.html#causalidad-cero">Consultar la Gran Ley</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Causalidad Cero</h3><p>Principio según el cual nada aparece sin causa y toda alteración de la realidad tiene un costo equivalente. <a href="leyes.html">Consultar las leyes del cosmos</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Necromancia sagrada</h3><p>Acuerdo secreto entre el Dios de la Muerte, su Emisaria y el Culto de la Luna sobre el retorno voluntario de ciertas almas. <a href="leyes.html#pacto-necromancia">Leer sobre el pacto</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Psicopompo</h3><p>Guía que acompaña a las almas durante su tránsito entre la vida y el más allá. <a href="emisario.html">Ver la Emisaria</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Síndrome de Desfase Interdimensional</h3><p>Condición relacionada con un juego cósmico en el que la conciencia de una persona puede quedar dentro de una representación de su realidad. <a href="leyes.html#munecas-cosmicas">Ver las reglas del juego</a>.</p></article>
+        <article class="glosa-entrada" data-glossary-entry><h3>Manuscrito prohibido</h3><p>Documento que conserva el testimonio de un hombre sobre el juicio secreto de la Trinidad y el pacto con el Sol y la Luna. <a href="mundo.html#actualidad">Ver dónde se encuentra</a>.</p></article>
+    </div>
+</section>
+    </main>
+    <footer class="ark-pie">Arkhe 2026</footer>
+
+
+    <script src="catalogo.js" defer></script>
+    <script src="menu.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #080808;
+    color: #eedcfc;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("arkhe.png");
+    background-position: center;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    opacity: 0.045;
+    z-index: -2;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(37, 21, 57, 0.25),
+        rgba(8, 8, 8, 0.98) 75%
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+nav {
+    width: 100%;
+    min-height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(9, 9, 9, 0.96);
+    border-bottom: 1px solid #2f1948;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: #cca9ef;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    color: #bc94e8;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #cca9ef;
+}
+
+.hero {
+    position: relative;
+    min-height: 500px;
+    padding: 110px 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #2f1948;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #331b4f 0%,
+            #180e24 38%,
+            #080808 78%
+        );
+}
+
+.hero-fondo {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(204, 169, 239, 0.08),
+            transparent 45%
+        );
+    pointer-events: none;
+}
+
+.hero-lineas {
+    position: absolute;
+    inset: 30px;
+    border: 1px solid rgba(204, 169, 239, 0.08);
+    pointer-events: none;
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.pre-titulo {
+    margin-bottom: 22px;
+    color: #9563cb;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 6px;
+}
+
+.hero h1 {
+    color: #cca9ef;
+    font-size: clamp(65px, 11vw, 125px);
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 15px;
+    text-shadow: 0 0 35px rgba(204, 169, 239, 0.08);
+}
+
+.subtitulo {
+    margin-top: 30px;
+    color: #bc94e8;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+main {
+    width: 100%;
+    padding: 90px 0 110px;
+}
+
+.introduccion,
+.mandatos,
+.causalidad,
+.vacios,
+.pacto,
+.juego,
+.resultado {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 130px;
+}
+
+.etiqueta {
+    margin-bottom: 18px;
+    color: #9563cb;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.introduccion h2,
+.mandatos h2,
+.causalidad h2,
+.vacios h2,
+.pacto h2,
+.juego h2,
+.resultado h2 {
+    color: #cca9ef;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+
+.linea {
+    width: 100%;
+    height: 1px;
+    margin: 25px 0 35px;
+    background: linear-gradient(
+        to right,
+        #9563cb,
+        #2f1948 35%,
+        transparent
+    );
+}
+
+.introduccion > p:not(.etiqueta),
+.mandatos > p:not(.etiqueta),
+.vacios > p:not(.etiqueta),
+.pacto > p:not(.etiqueta),
+.juego > p:not(.etiqueta) {
+    max-width: 850px;
+    margin-bottom: 20px;
+    color: #a373d7;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.leyes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.ley {
+    position: relative;
+    padding: 38px;
+    background: #10100f;
+    border: 1px solid #2f1948;
+    transition: 0.35s;
+}
+
+.ley:hover {
+    transform: translateY(-6px);
+    border-color: #9563cb;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.ley > span,
+.dogma > span,
+.vacio > span,
+.juego-grid article > span {
+    display: block;
+    margin-bottom: 25px;
+    color: #9563cb;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.ley h3,
+.dogma h3,
+.vacio h3,
+.juego-grid h3 {
+    margin-bottom: 8px;
+    color: #cca9ef;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.ley h4 {
+    margin-bottom: 25px;
+    color: #bc94e8;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.ley p,
+.dogma p,
+.vacio p,
+.juego-grid p {
+    margin-top: 15px;
+    color: #8b59c1;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.causalidad {
+    padding: 70px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(29, 17, 43, 0.95),
+            rgba(12, 12, 11, 0.98)
+        );
+    border: 1px solid #2f1948;
+}
+
+.causalidad .descripcion {
+    max-width: 850px;
+    margin-bottom: 45px;
+    color: #a373d7;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.dogmas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dogma {
+    padding: 30px;
+    border: 1px solid #2f1948;
+    background: #0c0c0b;
+    transition: 0.3s;
+}
+
+.dogma:hover {
+    border-color: #9563cb;
+    transform: translateY(-5px);
+}
+
+.vacio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.vacio {
+    position: relative;
+    padding: 35px;
+    background: #10100f;
+    border: 1px solid #2f1948;
+    transition: 0.35s;
+}
+
+.vacio:hover {
+    transform: translateY(-6px);
+    border-color: #9563cb;
+}
+
+.vacio strong {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 8px 12px;
+    color: #9563cb;
+    border: 1px solid #2f1948;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.documento {
+    width: 100%;
+    max-width: 650px;
+    min-height: 280px;
+    margin: 50px auto 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(
+            145deg,
+            #190f26,
+            #0c0c0b
+        );
+    border: 1px solid #9563cb;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        inset 0 0 50px rgba(204, 169, 239, 0.025);
+}
+
+.documento > span {
+    color: #9563cb;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.documento h3 {
+    margin-top: 18px;
+    color: #cca9ef;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+.documento .sello {
+    width: 55px;
+    height: 55px;
+    margin: 25px 0;
+    border: 1px solid #9563cb;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+.documento p {
+    color: #8b59c1;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.juego-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.juego-grid article {
+    padding: 30px;
+    background: #10100f;
+    border: 1px solid #2f1948;
+    transition: 0.3s;
+}
+
+.juego-grid article:hover {
+    border-color: #9563cb;
+    transform: translateY(-5px);
+}
+
+.resultados {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.resultado-card {
+    position: relative;
+    padding: 40px;
+    border: 1px solid #2f1948;
+    background: #10100f;
+    overflow: hidden;
+}
+
+.resultado-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    right: -100px;
+    border-radius: 50%;
+    opacity: 0.08;
+}
+
+.resultado-card.ganar::before {
+    background: #86a86d;
+}
+
+.resultado-card.perder::before {
+    background: #9b5555;
+}
+
+.resultado-card > span {
+    color: #9563cb;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.resultado-card h3 {
+    position: relative;
+    margin: 15px 0;
+    color: #cca9ef;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.resultado-card p {
+    position: relative;
+    color: #8b59c1;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.estado {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 70px;
+    padding: 70px 30px;
+    text-align: center;
+    border-top: 1px solid #2f1948;
+    border-bottom: 1px solid #2f1948;
+}
+
+.estado > span {
+    color: #9563cb;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.estado h2 {
+    margin-top: 20px;
+    color: #cca9ef;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+
+.estado p {
+    margin-top: 15px;
+    color: #8b59c1;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.volver {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 12px 20px;
+    color: #bc94e8;
+    border: 1px solid #2f1948;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.volver:hover {
+    color: #cca9ef;
+    border-color: #9563cb;
+    background: #130c1d;
+}
+
+@media (max-width: 1000px) {
+    .dogmas {
+        grid-template-columns: 1fr;
+    }
+
+    .juego-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .leyes-grid,
+    .vacio-grid,
+    .resultados {
+        grid-template-columns: 1fr;
+    }
+
+    .causalidad {
+        padding: 45px 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 80px 20px 65px;
+    }
+
+    .hero-lineas {
+        inset: 15px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        letter-spacing: 8px;
+    }
+
+    .subtitulo {
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 2;
+    }
+
+    main {
+        padding: 65px 0 80px;
+    }
+
+    .introduccion,
+    .mandatos,
+    .causalidad,
+    .vacios,
+    .pacto,
+    .juego,
+    .resultado {
+        width: 88%;
+        margin-bottom: 90px;
+    }
+
+    .introduccion h2,
+    .mandatos h2,
+    .causalidad h2,
+    .vacios h2,
+    .pacto h2,
+    .juego h2,
+    .resultado h2 {
+        font-size: 21px;
+        letter-spacing: 2px;
+    }
+
+    .linea {
+        margin: 20px 0 28px;
+    }
+
+    .ley {
+        padding: 28px;
+    }
+
+    .causalidad {
+        padding: 35px 25px;
+    }
+
+    .juego-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .documento {
+        padding: 35px 20px;
+    }
+
+    .estado {
+        width: 88%;
+        padding: 50px 20px;
+    }
+
+    .estado h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+}

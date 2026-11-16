@@ -1,0 +1,93 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: #f1e3fd;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(ellipse at 50% 0, #2c1844 0, #190f26 42rem, #0d0d0c 100%);
+}
+
+nav {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: .8rem max(5%, calc((100% - 1240px) / 2));
+    background: rgba(12, 12, 11, .92);
+    border-bottom: 1px solid rgba(181, 138, 227, .26);
+    backdrop-filter: blur(14px);
+}
+
+.logo { color: #f1e2fd; font-size: 1.35rem; font-weight: 700; letter-spacing: .3em; text-decoration: none; }
+.nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .45rem 1.25rem; }
+.nav-links a { color: #d4b4f3; font-size: .76rem; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; transition: color .2s ease; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: #dfc2f8; }
+
+.historia-page { width: min(1080px, 92%); margin: clamp(2rem, 5vw, 4.5rem) auto; }
+.historia-page > .introduccion, .historia-page > .funcion-seccion, .historia-page > .seccion {
+    position: relative;
+    margin: 0 auto 1.6rem;
+    padding: clamp(1.4rem, 4vw, 3.25rem);
+    color: #f1e3fd;
+    background: linear-gradient(135deg, rgba(33, 19, 51, .96), rgba(15, 15, 14, .96));
+    border: 1px solid rgba(181, 138, 227, .22);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .24);
+}
+.historia-page > .introduccion { padding-block: clamp(3rem, 8vw, 6rem); text-align: center; }
+.historia-page > .introduccion::before { position: absolute; top: 0; left: 50%; width: 72px; height: 2px; background: #b58ae3; content: ""; transform: translateX(-50%); }
+.historia-page > .introduccion::after { position: absolute; inset: 0; z-index: 0; background: url("arkhe.png") center / min(27rem, 72%) auto no-repeat; content: ""; opacity: .075; pointer-events: none; }
+.historia-page > .introduccion > * { position: relative; z-index: 1; }
+.introduccion h1 { margin: 0 0 1.2rem; color: #e8d0fb; font-size: clamp(2rem, 5vw, 3.3rem); font-weight: 500; letter-spacing: clamp(.12em, 1.2vw, .3em); }
+.introduccion > p:not(.cronologia-acceso) { max-width: 760px; margin: .7rem auto 0; color: #d4b3f3; line-height: 1.85; }
+.introduccion a, .historia-page a { color: #dfc2f8; text-underline-offset: .2em; }
+.historia-page > .funcion-seccion > h2, .historia-page > .seccion > h2 { margin: 0 0 1.3rem; padding-bottom: .9rem; color: #e8d0fb; font-size: clamp(1.2rem, 2.5vw, 1.65rem); font-weight: 500; letter-spacing: .1em; border-bottom: 1px solid rgba(181, 138, 227,.25); }
+.historia-page > .seccion p { max-width: 76ch; margin: 0 0 1.2rem; color: #d4b3f3; font-size: 1rem; line-height: 1.85; }
+.historia-page > .seccion p:last-child { margin-bottom: 0; }
+.historia-page .cronologia-acceso { margin: 1.5rem 0 0; }
+.cronologia-acceso a { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1rem; color: #dfc2f8; border: 1px solid rgba(181, 138, 227,.4); text-decoration: none; transition: background .2s ease, border-color .2s ease; }
+.cronologia-acceso a::after { content: "↓"; }
+.cronologia-acceso a:hover { background: rgba(181, 138, 227,.08); border-color: #dfc2f8; }
+.historia-page .funcion-intro { max-width: 75ch; margin: -.25rem 0 1.4rem; color: #d4b3f3; line-height: 1.75; }
+.historia-page .cronologia { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.historia-page .cronologia-evento { padding: 1.2rem; background: rgba(255,255,255,.025); border: 1px solid rgba(181, 138, 227,.18); border-top: 2px solid rgba(181, 138, 227,.6); }
+.historia-page .cronologia-evento time { display: block; margin-bottom: .65rem; color: #dcbef6; font-size: .72rem; font-weight: 700; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; }
+.historia-page .cronologia-evento h3 { margin: 0 0 .55rem; color: #f0e0fd; font-size: 1.08rem; }
+.historia-page .cronologia-evento p { margin: 0 0 .8rem; color: #d3b2f2; line-height: 1.7; }
+.historia-page .cronologia-evento a { font-size: .88rem; }
+.historia-page .tarjetas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; margin-top: 1.5rem; }
+.historia-page .tarjeta { min-height: 0; padding: 1.35rem; background: rgba(255,255,255,.025); border: 1px solid rgba(181, 138, 227,.18); transition: border-color .2s ease, transform .2s ease; }
+.historia-page .tarjeta:hover { transform: translateY(-3px); border-color: rgba(223, 194, 248,.65); }
+.historia-page .tarjeta h3 { margin: 0 0 .7rem; color: #dfc2f8; font-size: 1rem; letter-spacing: .04em; }
+.historia-page .tarjeta p { margin: 0; font-size: .92rem; line-height: 1.75; }
+.historia-page .frase-destacada, .historia-page .frase-final { margin-top: 1.6rem; padding: 1.5rem; color: #e8d0fb; background: rgba(181, 138, 227,.055); border-block: 1px solid rgba(181, 138, 227,.25); text-align: center; }
+.historia-page .frase-destacada p, .historia-page .frase-final p { max-width: none; margin: 0; color: #e8d0fb; font-size: clamp(1rem, 2vw, 1.25rem); font-style: italic; line-height: 1.8; }
+.historia-page blockquote { margin: 1.5rem 0; padding: 1.2rem 1.4rem; color: #e7cffb; background: rgba(255,255,255,.03); border-left: 3px solid #b58ae3; font-style: italic; line-height: 1.8; }
+.historia-page .separador { height: 1px; margin: 2rem 0; background: rgba(181, 138, 227,.2); }
+.historia-page > .seccion.secreto { background: linear-gradient(135deg, rgba(22, 14, 34,.98), rgba(11,11,10,.98)); border-color: rgba(181, 138, 227,.35); }
+.historia-page .secreto > h2 { color: #e5cbfa; }
+
+footer { padding: 1.8rem; color: #af82df; background: #0b0b0a; border-top: 1px solid rgba(181, 138, 227,.18); text-align: center; }
+footer p { margin: 0; font-size: .75rem; letter-spacing: .35em; }
+:focus-visible { outline: 2px solid #dfc2f8; outline-offset: 4px; }
+
+@media (max-width: 850px) {
+    nav { flex-direction: column; justify-content: center; gap: 1rem; padding: 1rem 5%; }
+    .nav-links { justify-content: center; }
+    .historia-page .tarjetas { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+    .historia-page { width: 94%; margin-block: 1.5rem; }
+    .nav-links { gap: .7rem 1rem; }
+    .nav-links a { font-size: .67rem; }
+    .historia-page > .introduccion, .historia-page > .funcion-seccion, .historia-page > .seccion { padding: 1.35rem; }
+    .historia-page .cronologia { grid-template-columns: 1fr; }
+    .historia-page .cronologia-evento { padding: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }

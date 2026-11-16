@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkhe</title>
+    <meta name="description" content="Explora Arkhe, un universo de dioses, personajes, criaturas e historias. Descubre sus leyes, su mundo y sus secretos.">
+    <link rel="icon" type="image/png" href="arkhe.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="accesibilidad.css">
+    <link rel="stylesheet" href="funciones.css">
+    <link rel="stylesheet" href="arkhe-compartido.css">
+</head>
+
+<body class="pagina-inicio">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+    <nav aria-label="Navegación principal">
+        <a href="index.html" class="logo">ARKHE</a>
+
+        <button class="menu-boton" type="button" aria-controls="menu-principal" aria-expanded="false" hidden>
+            <span class="menu-icono" aria-hidden="true"></span>
+            <span>Menú</span>
+        </button>
+
+        <div class="menu" id="menu-principal">
+            <a href="index.html" aria-current="page">Inicio</a>
+            <a href="dioses.html">Dioses</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="seres.html">Seres</a>
+            <a href="fanarts.html">Fanarts</a>
+            <a href="leyes.html">Leyes</a>
+            <a href="mundo.html">Mundo</a>
+            <a href="historia.html">Historia</a>
+            <a href="calendario.html">Calendario</a>
+        </div>
+    </nav>
+
+    <main id="contenido-principal" tabindex="-1">
+        <header class="ark-hero">
+            <div class="ark-hero-copy">
+                <p class="ark-label">EL PRINCIPIO DE TODO</p>
+                <h1>Arkhe</h1>
+                <p class="ark-sinopsis">El Sol quiere un día sin fin. La Luna reclama una noche eterna. Entre ambos, los mortales defienden su derecho a decidir.</p>
+                <div class="ark-acciones">
+                    <a class="ark-boton" href="#conflicto">Explorar el conflicto <span aria-hidden="true">↓</span></a>
+                    <a class="ark-boton ark-boton-secundario" href="personajes.html">Ver personajes</a>
+                </div>
+            </div>
+            <div class="ark-eclipse" aria-hidden="true">
+                <span class="ark-orbita"></span>
+                <span class="ark-disco"></span>
+                <img src="arkhe.png" alt="" fetchpriority="high">
+            </div>
+        </header>
+
+        <section class="ark-seccion" id="conflicto" aria-labelledby="titulo-conflicto">
+            <div class="ark-seccion-titulo">
+                <p class="ark-label">EL CONFLICTO</p>
+                <h2 id="titulo-conflicto">Dos astros, una isla</h2>
+                <p>Los Mandatos Reales limitan el poder de las deidades. Sus cultos llevan la disputa al mundo mortal.</p>
+            </div>
+            <div class="ark-facciones">
+                <article class="ark-faccion ark-solar">
+                    <div class="ark-astro" aria-hidden="true"></div>
+                    <p>LA IGLESIA DEL SOL</p>
+                    <h3>El día eterno</h3>
+                    <p>La religión oficial invoca el orden, la luz y el progreso para legitimar al trono.</p>
+                    <a href="seres.html#iglesia-del-sol">Conocer la Iglesia del Sol <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="ark-faccion ark-lunar">
+                    <div class="ark-astro" aria-hidden="true"></div>
+                    <p>EL CULTO DE LA LUNA</p>
+                    <h3>La noche eterna</h3>
+                    <p>Una red que vive en secreto y predica la igualdad, el refugio y la justicia por la ley del talión.</p>
+                    <a href="seres.html#culto-de-la-luna">Conocer el Culto de la Luna <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+            <a class="ark-texto-enlace" href="dioses.html#relaciones">Ver alianzas, rivalidades y pactos <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="ark-seccion" id="archivo" aria-labelledby="titulo-explorar">
+            <div class="ark-seccion-titulo">
+                <p class="ark-label">EL CÓDICE</p>
+                <h2 id="titulo-explorar">Explorar Arkhe</h2>
+            </div>
+            <div class="ark-archivo">
+                <a href="dioses.html"><strong>Dioses</strong><span>La Trinidad, los astros y las deidades de Arkhe.</span></a>
+                <a href="personajes.html"><strong>Personajes</strong><span>Los habitantes de Arkhe y sus historias.</span></a>
+                <a href="seres.html"><strong>Seres</strong><span>Necromancia, mitos y especies jugables.</span></a>
+                <a href="leyes.html"><strong>Leyes</strong><span>Mandatos, pactos y el orden del cosmos.</span></a>
+                <a href="fanarts.html"><strong>Fanarts</strong><span>La galería de la comunidad.</span></a>
+                <a href="calendario.html"><strong>Calendario</strong><span>Reuniones y avisos de la comunidad.</span></a>
+            </div>
+        </section>
+    </main>
+    <footer class="ark-pie">Arkhe 2026</footer>
+
+
+    <script src="menu.js" defer></script>
+
+</body>
+</html>

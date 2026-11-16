@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: #f1e3fd;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(ellipse at 50% 0, #2c1844 0, #190f26 42rem, #0d0d0c 100%);
+}
+
+nav {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: .8rem max(5%, calc((100% - 1240px) / 2));
+    background: rgba(12, 12, 11, .92);
+    border-bottom: 1px solid rgba(181, 138, 227, .26);
+    backdrop-filter: blur(14px);
+}
+
+.logo { color: #f1e2fd; font-size: 1.35rem; font-weight: 700; letter-spacing: .3em; text-decoration: none; }
+.nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .45rem 1.25rem; }
+.nav-links a { color: #d4b4f3; font-size: .76rem; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; transition: color .2s ease; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: #dfc2f8; }
+
+.mundo { width: min(1160px, 92%); margin: clamp(2rem, 5vw, 4.5rem) auto; }
+.introduccion, .mundo .funcion-seccion {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 1.6rem;
+    padding: clamp(1.4rem, 4.3vw, 3.4rem);
+    color: #f1e3fd;
+    background: linear-gradient(135deg, rgba(33, 19, 51, .96), rgba(15, 15, 14, .96));
+    border: 1px solid rgba(181, 138, 227, .22);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .24);
+}
+.introduccion { padding-block: clamp(3rem, 8vw, 6.2rem); text-align: center; }
+.introduccion::before { position: absolute; top: 0; left: 50%; width: 72px; height: 2px; background: #b58ae3; content: ""; transform: translateX(-50%); }
+.introduccion::after { position: absolute; inset: 0; z-index: 0; background: url("arkhe.png") center / min(27rem, 72%) auto no-repeat; content: ""; opacity: .075; pointer-events: none; }
+.introduccion > * { position: relative; z-index: 1; }
+.introduccion h1 { margin: 0 0 1.25rem; color: #e8d0fb; font-size: clamp(2rem, 5vw, 3.35rem); font-weight: 500; letter-spacing: clamp(.12em, 1.2vw, .3em); }
+.introduccion p { max-width: 760px; margin: .7rem auto 0; color: #d4b3f3; font-size: 1rem; line-height: 1.85; }
+.introduccion a, .mundo .funcion-seccion a { color: #dfc2f8; text-underline-offset: .2em; }
+.mundo .funcion-seccion { width: 100%; margin: 0 auto 1.6rem; }
+.mundo .funcion-seccion > h2 { margin: 0 0 .8rem; padding-bottom: .9rem; color: #e8d0fb; font-size: clamp(1.2rem, 2.5vw, 1.65rem); font-weight: 500; letter-spacing: .1em; border-bottom: 1px solid rgba(181, 138, 227, .25); }
+.mundo .funcion-intro { max-width: 780px; margin: 0 0 1.4rem; color: #d4b3f3; line-height: 1.75; }
+
+.mapa-panel { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .8fr); gap: 1.2rem; align-items: stretch; }
+.mapa-marco { display: flex; min-height: 370px; flex-direction: column; justify-content: center; padding: 1.3rem; background: radial-gradient(ellipse at 50% 45%, rgba(58, 76, 67, .8), rgba(17, 27, 26, .96)); border: 1px solid rgba(157, 184, 157, .24); }
+.mapa-marco > p { margin: 0 0 1.2rem; color: #cbd6c9; font-size: .72rem; letter-spacing: .13em; text-align: center; text-transform: uppercase; }
+.mapa-isla { display: grid; min-height: 280px; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: center; gap: .85rem; padding: 2rem; background: linear-gradient(145deg, #8e5bc4, #3c5948); clip-path: polygon(14% 8%,37% 3%,55% 11%,81% 8%,94% 29%,86% 51%,96% 70%,75% 91%,50% 96%,30% 88%,9% 82%,4% 58%,12% 41%,5% 24%); }
+.mapa-marcador { min-height: 58px; padding: .65rem .8rem; color: #f7effe; background: rgba(13, 20, 17, .86); border: 1px solid rgba(232, 209, 251, .48); border-radius: 2rem; cursor: pointer; font: 600 .88rem/1.35 Arial, sans-serif; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.mapa-marcador:hover { transform: translateY(-2px); }
+.mapa-marcador[aria-pressed="true"] { color: #1c2119; background: #dfc2f8; }
+.mapa-detalle { min-height: 170px; align-self: center; padding: 1.5rem; color: #e2c6f9; background: rgba(255, 255, 255, .035); border: 1px solid rgba(181, 138, 227, .22); line-height: 1.75; }
+.mapa-detalle h3 { margin: 0 0 .75rem; color: #dfc2f8; font-size: 1.15rem; }
+.mapa-detalle p { margin: 0; }
+.mapa-nota { margin: 1rem 0 0; color: #ba91e7; font-size: .84rem; line-height: 1.6; }
+.mundo .glosa-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+.mundo .glosa-entrada { padding: 1.2rem; background: rgba(255,255,255,.025); border: 1px solid rgba(181, 138, 227,.18); }
+.mundo .glosa-entrada h3 { margin: 0 0 .55rem; color: #dfc2f8; font-size: 1rem; }
+.mundo .glosa-entrada p { margin: 0; color: #d3b2f2; line-height: 1.7; }
+.mundo .relaciones-grid { display: grid; grid-template-columns: 1fr; }
+.mundo .relacion-grupo { padding: 1.3rem; background: rgba(255,255,255,.025); border: 1px solid rgba(181, 138, 227,.18); }
+.mundo .relacion-grupo h3 { margin: 0 0 .55rem; color: #dfc2f8; }
+.mundo .relacion-grupo p { margin: 0 0 1rem; color: #d3b2f2; line-height: 1.7; }
+
+footer { padding: 1.8rem; color: #af82df; background: #0b0b0a; border-top: 1px solid rgba(181, 138, 227,.18); text-align: center; }
+footer p { margin: 0; font-size: .75rem; letter-spacing: .35em; }
+:focus-visible { outline: 2px solid #dfc2f8; outline-offset: 4px; }
+
+@media (max-width: 850px) {
+    nav { flex-direction: column; justify-content: center; gap: 1rem; padding: 1rem 5%; }
+    .nav-links { justify-content: center; }
+    .mapa-panel { grid-template-columns: 1fr; }
+    .mapa-marco { min-height: 320px; }
+}
+@media (max-width: 560px) {
+    .mundo { width: 94%; margin-block: 1.5rem; }
+    .nav-links { gap: .7rem 1rem; }
+    .nav-links a { font-size: .67rem; }
+    .mundo .funcion-seccion { padding: 1.25rem; }
+    .mapa-marco { min-height: 0; padding: .8rem; }
+    .mapa-isla { min-height: 0; grid-template-columns: 1fr; gap: .65rem; padding: 1.2rem; clip-path: none; border-radius: 1.2rem; }
+    .mapa-marcador { min-height: 48px; }
+    .mundo .glosa-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }

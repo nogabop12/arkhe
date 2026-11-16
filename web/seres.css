@@ -1,0 +1,206 @@
+@import url("style.css");
+
+.pagina-seres {
+    --seres-ancho: 72rem;
+    --seres-texto: #f9f2ff;
+    --seres-suave: #d8c9e8;
+    --seres-linea: #593b78;
+    --seres-luz: #e2b5ff;
+    background: #0c0912;
+}
+.pagina-seres::before, .pagina-seres::after { content: none; }
+.pagina-seres :is(.encabezado, .catalogo-controles, .categorias, .categoria, #glosario) {
+    width: min(var(--seres-ancho), calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.pagina-seres .encabezado {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(13rem, .65fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 6rem);
+    min-height: 22rem;
+    margin-block: clamp(1.25rem, 4vw, 3.5rem) clamp(1.25rem, 4vw, 2.5rem);
+    padding: clamp(1.5rem, 6vw, 4.5rem);
+    border: 1px solid var(--seres-linea);
+    border-radius: 1.5rem;
+    background: radial-gradient(ellipse at 80% 45%, #382052, transparent 58%), linear-gradient(120deg, #1b1229, #130e1e);
+}
+.pagina-seres .pre-titulo {
+    margin: 0 0 .75rem;
+    color: var(--seres-luz);
+    font: 650 .72rem/1.4 system-ui, sans-serif;
+    letter-spacing: .17em;
+}
+.pagina-seres .pre-titulo::before, .pagina-seres .pre-titulo::after { content: none; }
+.pagina-seres .encabezado h1 {
+    margin: 0;
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    font-weight: 500;
+    letter-spacing: -.045em;
+    line-height: .97;
+    color: var(--seres-texto);
+}
+.pagina-seres .encabezado .descripcion { max-width: 38ch; margin: 1.25rem 0 0; }
+.seres-sello {
+    justify-self: center;
+    position: relative;
+    width: min(100%, 17rem);
+    aspect-ratio: 1;
+    border: 1px solid #ab74d281;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 0 12px #b075d81a, 0 0 0 24px #b075d810;
+    background: radial-gradient(circle, #60378d50, #21132f90);
+}
+.seres-sello img {
+    width: 72%;
+    height: 72%;
+    object-fit: contain;
+}
+
+.pagina-seres .catalogo-controles {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    border-color: var(--seres-linea);
+    background: #181021;
+    border-radius: 1rem;
+    margin-block: 0 1rem;
+}
+.pagina-seres .catalogo-controles :is(input, select), .pagina-seres .glosa-controls input { border-radius: .55rem; }
+.pagina-seres .categorias {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .65rem;
+    margin-block: 0 clamp(2.75rem, 7vw, 5rem);
+}
+.pagina-seres .categorias a {
+    display: grid;
+    grid-template-columns: .65rem minmax(0, 1fr);
+    column-gap: .8rem;
+    padding: .95rem;
+    border: 1px solid #463355;
+    border-radius: .65rem;
+    background: #15101d;
+    color: var(--seres-texto);
+    text-decoration: none;
+}
+.pagina-seres .categorias a::before, .pagina-seres .titulo-categoria::before {
+    content: "";
+    align-self: start;
+    width: .6rem;
+    height: .6rem;
+    margin-top: .35rem;
+    border: 1px solid #c08ceb;
+    transform: rotate(45deg);
+    background: #a45bd526;
+}
+.pagina-seres .categorias a:hover, .pagina-seres .categorias a:focus-visible { border-color: #b783de; background: #231632; }
+.pagina-seres .categorias :is(h2, p) { margin: 0; }
+.pagina-seres .categorias h2 { font-size: 1.04rem; }
+.pagina-seres .categorias p { margin-top: .3rem; font-size: .82rem; }
+
+.pagina-seres :is(.categoria, #glosario) { margin-block: 0 clamp(3.5rem, 8vw, 6rem); }
+.pagina-seres .titulo-categoria {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: .35rem 1rem;
+    border-bottom: 1px solid var(--seres-linea);
+    padding: 0 0 1rem;
+    margin-bottom: 1.125rem;
+}
+.pagina-seres .titulo-categoria::before {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+    margin: 0;
+    box-shadow: 0 0 0 5px #a45bd526;
+}
+.pagina-seres .titulo-categoria > :is(div, h2) { grid-column: 2; }
+.pagina-seres .titulo-categoria h2 {
+    margin: 0;
+    font-size: clamp(1.7rem, 4vw, 2.85rem);
+    font-weight: 500;
+    text-transform: none;
+    line-height: 1.1;
+}
+.pagina-seres .titulo-categoria p {
+    margin: 0 0 .55rem;
+    color: var(--seres-luz);
+    font: 650 .7rem/1.4 system-ui, sans-serif;
+    letter-spacing: .1em;
+}
+.pagina-seres :is(.descripcion, .texto-categoria, .ser-contenido p, .categorias p) {
+    color: var(--seres-suave);
+    font-family: system-ui, sans-serif;
+    line-height: 1.65;
+}
+.pagina-seres .texto-categoria { max-width: 76ch; margin: 0 0 1.5rem; }
+.pagina-seres .seres {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(.8rem, 2vw, 1.3rem);
+}
+.pagina-seres #especies-jugables .seres { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pagina-seres main .ser {
+    position: relative;
+    border: 1px solid var(--seres-linea);
+    border-radius: .95rem;
+    padding: clamp(1.05rem, 2.9vw, 2rem);
+    background: radial-gradient(ellipse at 100% 0, #322044, transparent 70%), #171020;
+    box-shadow: 0 10px 26px #07040d55;
+}
+.pagina-seres .ser h3 {
+    color: var(--seres-texto);
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 .85rem;
+}
+.pagina-seres .ser h3::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 1px;
+    margin-top: .75rem;
+    background: #b77de7;
+}
+.pagina-seres .ser-contenido p {
+    margin: .65rem 0 0;
+    overflow-wrap: anywhere;
+    font-size: .95rem;
+}
+.pagina-seres .ser-contenido > strong:last-child {
+    display: block;
+    padding: .65rem .8rem;
+    margin-top: 1rem;
+    border-left: 2px solid #b87be8;
+    border-radius: .2rem;
+    background: #af74e119;
+    color: #f0dcff;
+    font: 600 .85rem/1.4 system-ui, sans-serif;
+}
+.pagina-seres .categoria-cerrada {
+    padding: 1rem 1.25rem;
+    background: #140f1b;
+    border: 1px dashed var(--seres-linea);
+    border-radius: .75rem;
+}
+.pagina-seres .categoria-cerrada h2 { margin: 0 0 .35rem; font-size: 1.1rem; }
+.pagina-seres .categoria-cerrada p { margin: 0; color: var(--seres-suave); }
+
+@media (max-width: 800px) {
+    .pagina-seres #especies-jugables .seres, .pagina-seres .categorias { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .pagina-seres .encabezado { grid-template-columns: minmax(0, 1fr); min-height: 0; gap: 2rem; padding: 1.5rem 1.25rem 2rem; }
+    .seres-sello { width: 7.5rem; justify-self: start; margin-left: 1rem; box-shadow: 0 0 0 8px #b075d81a; }
+    .pagina-seres .catalogo-controles, .pagina-seres .seres, .pagina-seres #especies-jugables .seres { grid-template-columns: minmax(0, 1fr); }
+    .pagina-seres .categorias a { gap: .55rem; padding: .8rem .65rem; }
+}
+

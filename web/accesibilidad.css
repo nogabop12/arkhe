@@ -1,0 +1,110 @@
+/* Accesibilidad compartida */
+html {
+    scroll-padding-top: 6rem;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 10000;
+    padding: 0.75rem 1rem;
+    color: #111;
+    background: #efdefc;
+    border: 2px solid currentColor;
+    font: 600 1rem/1.3 system-ui, sans-serif;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #efdefc;
+    outline-offset: 3px;
+}
+nav a[aria-current="page"] {
+    color: #efdefc;
+    font-weight: 600;
+}
+
+.menu-boton {
+    display: none;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 44px;
+    padding: 0.6rem 0.8rem;
+    color: #e7cffb;
+    background: rgba(181, 138, 227, 0.08);
+    border: 1px solid rgba(181, 138, 227, 0.45);
+    border-radius: 3px;
+    font: 600 0.9rem/1 Arial, sans-serif;
+    cursor: pointer;
+}
+
+.menu-icono,
+.menu-icono::before,
+.menu-icono::after {
+    display: block;
+    width: 17px;
+    height: 2px;
+    background: currentColor;
+}
+
+.menu-icono { position: relative; }
+.menu-icono::before,
+.menu-icono::after { content: ""; position: absolute; left: 0; }
+.menu-icono::before { top: -6px; }
+.menu-icono::after { top: 6px; }
+
+.menu-boton:focus-visible,
+.menu a:focus-visible,
+.nav-links a:focus-visible {
+    outline: 3px solid #efdefc;
+    outline-offset: 4px;
+}
+
+@media (max-width: 650px) {
+    body.nav-ready nav {
+        display: flex;
+        min-height: 68px;
+        height: auto;
+        padding: 0.7rem 1rem;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        background: rgba(5, 5, 5, 0.94);
+    }
+
+    body.nav-ready .menu-boton { display: inline-flex; }
+
+    body.nav-ready nav .menu,
+    body.nav-ready nav .nav-links {
+        display: none;
+        flex: 0 0 100%;
+        order: 3;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: stretch;
+        gap: 0.45rem;
+        padding: 0.75rem 0 0.25rem;
+        border-top: 1px solid rgba(181, 138, 227, 0.2);
+    }
+
+    body.nav-ready nav .menu.is-open,
+    body.nav-ready nav .nav-links.is-open { display: grid; }
+
+    body.nav-ready nav .menu a,
+    body.nav-ready nav .nav-links a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0.55rem 0.65rem;
+        border: 1px solid rgba(181, 138, 227, 0.16);
+        font-size: 0.82rem;
+    }
+}

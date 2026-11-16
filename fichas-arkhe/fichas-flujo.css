@@ -1,0 +1,29 @@
+.ficha-workflow,.ficha-contenedor{width:min(70rem,calc(100% - 2rem));margin:2rem auto;padding:clamp(1rem,4vw,2.4rem);background:#1c1426;color:#faf5ff;border:1px solid #8565a1;border-radius:1rem;font:1rem/1.6 system-ui,sans-serif}
+.ficha-portal::before,.ficha-portal::after{display:none}
+.ficha-workflow :is(h2,h3),.ficha-contenedor :is(h1,h2,h3){color:#faf5ff;margin:.3rem 0 .9rem;font-family:Georgia,serif;line-height:1.2}
+.ficha-workflow h2,.ficha-contenedor h1{font-size:clamp(1.65rem,5vw,2.55rem)}
+.ficha-progreso{display:grid;gap:.25rem;margin:1rem 0;color:#c9bcd8}
+.ficha-progreso progress{width:100%;height:.65rem;accent-color:#a880d0}
+.ficha-paso p,.ficha-contenedor p{margin:.6rem 0}
+.ficha-campos,.ficha-admin-grid{display:grid;gap:.9rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+.ficha-campo,.ficha-rasgos,.ficha-contenedor label{display:grid;gap:.35rem;min-width:0}
+.ficha-campo:has(textarea){grid-column:1/-1}
+.ficha-workflow :is(input:not([type=radio],[type=checkbox]),select,textarea),.ficha-contenedor :is(input:not([type=checkbox]),textarea){width:100%;min-width:0;padding:.65rem;border:1px solid #8565a1;border-radius:.4rem;background:#100c17;color:#faf5ff;font:inherit}
+.ficha-workflow small{color:#c9bcd8}
+.ficha-rasgos{padding:.8rem;border:1px solid #8565a1;border-radius:.5rem}
+.ficha-rasgos legend{padding:0 .3rem;font-weight:650}
+.ficha-rasgos label,.ficha-workflow .ficha-check,.ficha-contenedor .ficha-check{display:flex;align-items:flex-start;gap:.55rem}
+.ficha-rasgos small{display:block;line-height:1.4}
+.ficha-rasgos input,.ficha-check input{margin-top:.38rem}
+.ficha-acciones{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:1rem}
+.ficha-workflow button,.ficha-contenedor button{min-height:44px;padding:.6rem 1rem;border:1px solid #a887c2;border-radius:.4rem;background:#753fa5;color:#faf5ff;cursor:pointer;font:600 1rem/1.3 system-ui,sans-serif}
+.ficha-workflow button:disabled{opacity:.65;cursor:wait}
+.ficha-error,.ficha-aviso{padding:.65rem .8rem;border-left:3px solid #f0a29d;background:#362135;color:#ffdddd}
+.ficha-contenedor a{color:#e8c6ff;text-underline-offset:.2em}
+.ficha-contenedor :is(dd,p){overflow-wrap:anywhere}
+.ficha-contenedor dt{margin-top:.6rem;font-weight:700}
+.ficha-contenedor dd{margin-left:0;color:#c9bcd8}
+.ficha-contenedor iframe{width:100%;height:38rem;border:1px solid #8565a1;background:#100c17}
+.ficha-contenedor code{overflow-wrap:anywhere}
+@media(max-width:650px){.ficha-campos,.ficha-admin-grid{grid-template-columns:1fr}}
+

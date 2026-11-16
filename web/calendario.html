@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arkhe — Calendario</title>
+<link rel="icon" type="image/png" href="arkhe.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="accesibilidad.css">
+<link rel="stylesheet" href="arkhe-compartido.css">
+</head>
+<body class="ark-agenda">
+<a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+<nav aria-label="Navegación principal"><a href="index.html" class="logo">ARKHE</a><div class="menu"><a href="index.html">Inicio</a>
+<a href="dioses.html">Dioses</a>
+<a href="personajes.html">Personajes</a>
+<a href="seres.html">Seres</a>
+<a href="fanarts.html">Fanarts</a>
+<a href="leyes.html">Leyes</a>
+<a href="mundo.html">Mundo</a>
+<a href="historia.html">Historia</a>
+<a href="calendario.html" aria-current="page">Calendario</a></div></nav>
+<main id="contenido-principal" class="archivo-panel" tabindex="-1"><div data-agenda><h1>Calendario</h1><p>Reuniones y avisos de la comunidad de Arkhe.</p>
+<div class="ark-agenda-layout"><div data-agenda-interactiva hidden><div class="agenda-controles">
+<button type="button" data-mover-mes="-1" aria-label="Mes anterior">‹</button>
+<h2 class="agenda-mes" aria-live="polite" aria-atomic="true"></h2>
+<button type="button" data-mover-mes="1" aria-label="Mes siguiente">›</button></div>
+<div class="agenda-grilla" role="group" aria-label="Días del mes"><strong>Lun</strong><strong>Mar</strong><strong>Mié</strong><strong>Jue</strong><strong>Vie</strong><strong>Sáb</strong><strong>Dom</strong></div>
+<div class="agenda-controles"><button type="button" data-ver-aviso>Ver mes de la reunión</button></div><p class="agenda-leyenda">El día resaltado tiene un aviso.</p></div>
+<aside aria-labelledby="ark-agenda-avisos"><h2 id="ark-agenda-avisos">Avisos</h2><article class="agenda-aviso"><h2>Reunión informativa</h2>
+<p>Aviso pasado</p><p><time datetime="2026-11-03T01:45:00Z">lunes, 2 de noviembre de 2026, 22:45 (hora de Argentina)</time></p>
+<p>El aviso convocó a una reunión para explicar las actualizaciones del lore, repasar las reglas y responder dudas. Se pidió asistir en lo posible por su carácter crucial.</p>
+<p>Si solo tienes el rol <strong>viajero</strong>, lee y acepta las reglas reaccionando al mensaje con el emoji correspondiente para obtener el rol <strong>participantes</strong> y poder estar en la serie.</p></article>
+<p data-sin-eventos hidden>No hay eventos publicados para este mes.</p></aside></div></div></main>
+    <footer class="ark-pie">Arkhe 2026</footer>
+
+<script src="menu.js" defer></script>
+<script src="calendario.js" defer></script>
+</body>
+</html>

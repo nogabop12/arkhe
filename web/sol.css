@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0c0812;
+    color: #ebd7fc;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+nav {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    background: rgba(12, 8, 18, 0.96);
+    border-bottom: 1px solid rgba(205, 171, 240, 0.18);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: #dbbcf6;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #a97bda;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #dbbcf6;
+}
+
+.hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: #0c0812;
+}
+
+.video-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            rgba(12, 8, 18, 0.25),
+            rgba(12, 8, 18, 0.88)
+        );
+    z-index: 1;
+}
+
+.sol-hero {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        #fbf5ff 0%,
+        #e7cffb 35%,
+        #cdabf0 60%,
+        #8653bc 100%
+    );
+    box-shadow:
+        0 0 45px rgba(228, 202, 250, 0.35),
+        0 0 120px rgba(205, 171, 240, 0.2);
+    opacity: 0.17;
+    z-index: 1;
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+.pre-titulo {
+    color: #d0aef1;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: #faf5ff;
+    font-size: clamp(45px, 7vw, 90px);
+    letter-spacing: 8px;
+    font-weight: normal;
+    text-shadow:
+        0 0 20px rgba(228, 202, 250, 0.3),
+        0 0 50px rgba(205, 171, 240, 0.15);
+}
+
+.subtitulo {
+    color: #d8b9f5;
+    font-size: 19px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+main {
+    width: min(1200px, 90%);
+    margin: auto;
+    padding: 70px 0;
+}
+
+.volver,
+.volver-final {
+    display: inline-block;
+    color: #b287e1;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.volver:hover,
+.volver-final:hover {
+    color: #dbbcf6;
+}
+
+.introduccion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    margin: 80px 0 140px;
+}
+
+.imagen {
+    position: relative;
+}
+
+.imagen img {
+    width: 100%;
+    display: block;
+    filter: saturate(80%);
+    border: 1px solid rgba(205, 171, 240, 0.2);
+}
+
+.texto .etiqueta,
+.estado .etiqueta {
+    color: #caa7ef;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.texto h2,
+.estado h2 {
+    color: #f0e0fd;
+    font-size: 38px;
+    font-weight: normal;
+    margin: 15px 0 25px;
+}
+
+.texto p,
+.contenido-costo p,
+.mandatos-contenido p,
+.estado p {
+    color: #a97bdb;
+    margin-bottom: 20px;
+}
+
+.titulo-seccion {
+    margin-bottom: 45px;
+}
+
+.titulo-seccion span {
+    color: #9764cd;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.titulo-seccion h2 {
+    color: #e9d2fb;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-top: 8px;
+}
+
+.rivalidad,
+.mandatos,
+.iglesia,
+.costo {
+    margin-bottom: 140px;
+}
+
+.rivalidad-grid,
+.iglesia-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.rival,
+.iglesia-card {
+    background: rgba(235, 215, 252, 0.025);
+    border: 1px solid rgba(205, 171, 240, 0.13);
+    padding: 40px;
+    transition: 0.35s;
+}
+
+.rival:hover,
+.iglesia-card:hover {
+    border-color: rgba(219, 188, 246, 0.5);
+    transform: translateY(-5px);
+}
+
+.rival span,
+.iglesia-card span {
+    color: #a575d8;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.rival h3,
+.iglesia-card h3 {
+    color: #ebd7fc;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 12px 0 15px;
+}
+
+.rival p,
+.iglesia-card p {
+    color: #a576d8;
+}
+
+.sol-card {
+    box-shadow: inset 0 2px 0 rgba(235, 214, 251, 0.6);
+}
+
+.luna-card {
+    box-shadow: inset 0 2px 0 rgba(197, 201, 209, 0.25);
+}
+
+.mandatos-contenido,
+.contenido-costo {
+    max-width: 850px;
+}
+
+.iglesia-card {
+    min-height: 220px;
+    box-shadow: inset 0 1px 0 rgba(205, 171, 240, 0.12);
+}
+
+.estado {
+    border-top: 1px solid rgba(205, 171, 240, 0.18);
+    border-bottom: 1px solid rgba(205, 171, 240, 0.18);
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 1fr 100px 1.5fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.estado-linea {
+    height: 1px;
+    background: rgba(205, 171, 240, 0.35);
+}
+
+.estado p {
+    margin: 0;
+}
+
+.volver-final {
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .menu {
+        gap: 15px;
+    }
+
+    .introduccion {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .estado {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .estado-linea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 0 4%;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .sol-hero {
+        width: 230px;
+        height: 230px;
+    }
+
+    .rivalidad-grid,
+    .iglesia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 88%;
+    }
+}
+
+.imagen-fallback { display:flex; width:100%; height:100%; min-height:220px; flex-direction:column; align-items:center; justify-content:center; gap:.6rem; color:#dfc2f8; background:radial-gradient(circle at center,rgba(204, 169, 239,.16),transparent 58%),linear-gradient(145deg,#241436,#130c1d); border:1px solid rgba(181, 138, 227,.22); }
+.imagen-fallback span { font:clamp(2rem,7vw,4rem) Georgia,serif; letter-spacing:.08em; }
+.imagen-fallback small { color:#c9a5ee; font:600 .65rem/1.4 Arial,sans-serif; letter-spacing:.14em; }

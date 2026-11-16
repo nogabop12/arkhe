@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.pdf
+*.log
+arkhe-private/

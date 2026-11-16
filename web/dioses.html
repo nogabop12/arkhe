@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkhe — Dioses</title>
+    <meta name="description" content="Conoce a los dioses de Arkhe, sus dominios, jerarquías y alianzas.">
+    <link rel="icon" type="image/png" href="arkhe.png">
+    <link rel="stylesheet" href="dioses.css">
+    <link rel="stylesheet" href="accesibilidad.css">
+    <link rel="stylesheet" href="funciones.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet" href="arkhe-compartido.css">
+</head>
+<body class="ark-dioses">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+    <nav aria-label="Navegación principal">
+        <a href="index.html" class="logo">ARKHE</a>
+
+        <div class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="dioses.html" aria-current="page">Dioses</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="seres.html">Seres</a>
+            <a href="fanarts.html">Fanarts</a>
+            <a href="leyes.html">Leyes</a>
+            <a href="mundo.html">Mundo</a>
+            <a href="historia.html">Historia</a>
+            <a href="calendario.html">Calendario</a>
+        </div>
+    </nav>
+
+    <header class="ark-portada">
+        <p class="pre-titulo">COSMOLOGÍA DE ARKHE</p>
+        <h1>DIOSES</h1>
+        <p class="descripcion">
+            Las entidades que dieron forma a Arkhe y representan
+            las fuerzas que gobiernan su existencia.
+        </p>
+    </header>
+
+    <main id="contenido-principal" tabindex="-1">
+    <section class="funcion-seccion" aria-labelledby="titulo-cosmologia">
+        <h2 id="titulo-cosmologia">El origen de la divinidad</h2>
+        <p>Los dioses tienen poder por su propia naturaleza, y su rango determina su alcance. El olvido total puede acabar con la conciencia de una deidad cuando el cosmos absorbe su esencia, aunque su imagen permanezca. Los dioses menores son especialmente vulnerables al olvido en sus universos.</p>
+        <p>La Trinidad Suprema es única en todo el multiverso y su existencia no depende de la fe. La Durmiente aporta la sustancia de la realidad, el Tiempo mantiene su continuidad y la Tejedora estructura las dimensiones. El Sol y la Luna fueron las primeras conciencias creadas por la Durmiente.</p>
+        <p><a href="leyes.html#causalidad-cero">Leer el Principio de Causalidad Cero</a></p>
+    </section>
+
+
+<div class="catalogo-controles" data-catalog="dioses" role="search" aria-label="Buscar y filtrar dioses" hidden>
+    <label for="buscar-dioses">Buscar por nombre o dominio
+        <input id="buscar-dioses" type="search" data-query placeholder="Ej.: Sol, sueños, vida" autocomplete="off">
+    </label>
+    <label for="filtrar-dioses">Filtrar por jerarquía
+        <select id="filtrar-dioses" data-category>
+            <option value="todos">Todas las jerarquías</option><option value="supremos">Supremos</option><option value="primarios">Primarios</option><option value="mayores">Mayores</option><option value="liminares">Liminares</option><option value="menores">Menores</option>
+        </select>
+    </label>
+    <p class="catalogo-resultado" data-count aria-live="polite"></p>
+    <p class="catalogo-resultado" data-empty data-filtro-vacio hidden>No encontramos dioses que coincidan con la búsqueda.</p>
+</div>
+
+        <section class="jerarquia">
+    <a href="#supremos"><span>01</span><h2>Supremos</h2></a>
+    <a href="#primarios"><span>02</span><h2>Primarios</h2></a>
+    <a href="#mayores"><span>03</span><h2>Mayores</h2></a>
+    <a href="#liminares"><span>04</span><h2>Liminares</h2></a>
+    <a href="#menores"><span>05</span><h2>Menores</h2></a>
+    <a href="#relaciones"><span>06</span><h2>Relaciones</h2></a>
+</section>
+
+        <section class="categoria" id="supremos">
+
+            <div class="titulo-categoria">
+                <span>01</span>
+                <h2>DIOSES SUPREMOS</h2>
+            </div>
+
+            <p class="texto-categoria">
+                Las entidades primordiales que existen por encima
+                de las demás divinidades.
+            </p>
+
+            <div class="dioses">
+
+                <a href="durmiente.html" class="dios durmiente">
+                    <span class="numero">01</span>
+                    <h3>Diosa Durmiente</h3>
+                    <p>Creación</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="tiempo.html" class="dios tiempo">
+                    <span class="numero">02</span>
+                    <h3>Dios del Tiempo</h3>
+                    <p>Continuidad</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="tejedora.html" class="dios tejedora">
+                    <span class="numero">03</span>
+                    <h3>Diosa Tejedora</h3>
+                    <p>Dimensiones y destino</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="categoria" id="primarios">
+
+            <div class="titulo-categoria">
+                <span>02</span>
+                <h2>DIOSES PRIMARIOS</h2>
+            </div>
+
+            <p class="texto-categoria">
+                Las primeras conciencias creadas por la Diosa Durmiente.
+            </p>
+
+            <div class="dioses">
+
+                <a href="sol.html" class="dios sol">
+                    <span class="numero">01</span>
+                    <h3>Dios del Sol</h3>
+                    <p>Luz y día</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="luna.html" class="dios luna">
+                    <span class="numero">02</span>
+                    <h3>Diosa de la Luna</h3>
+                    <p>Noche y magia</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="categoria" id="mayores">
+
+            <div class="titulo-categoria">
+                <span>03</span>
+                <h2>DIOSES MAYORES</h2>
+            </div>
+
+            <p class="texto-categoria">
+                Divinidades relacionadas con las fuerzas fundamentales
+                de la existencia mortal.
+            </p>
+
+            <div class="dioses">
+
+                <a href="naturaleza.html" class="dios naturaleza">
+                    <span class="numero">01</span>
+                    <h3>Diosa de la Naturaleza</h3>
+                    <p>Ciclos y vida natural</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="vida.html" class="dios vida">
+                    <span class="numero">02</span>
+                    <h3>Dios de la Vida</h3>
+                    <p>Vida y sanación</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="muerte.html" class="dios muerte">
+                    <span class="numero">03</span>
+                    <h3>Dios de la Muerte</h3>
+                    <p>Final y descanso</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="amor.html" class="dios amor">
+                    <span class="numero">04</span>
+                    <h3>Diosa del Amor</h3>
+                    <p>Vínculos y emociones</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="categoria" id="liminares">
+
+            <div class="titulo-categoria">
+                <span>04</span>
+                <h2>DIOSES LIMINARES</h2>
+            </div>
+
+            <p class="texto-categoria">
+                Divinidades relacionadas con conceptos abstractos
+                y los límites de las leyes de la realidad.
+            </p>
+
+            <div class="dioses">
+
+                <a href="juego.html" class="dios juego">
+                    <span class="numero">01</span>
+                    <h3>Loco de las Apuestas</h3>
+                    <p>Azar y juego</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="caos.html" class="dios caos">
+                    <span class="numero">02</span>
+                    <h3>Dios del Caos</h3>
+                    <p>Discordia y cambio</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="sueño.html" class="dios sueno">
+                    <span class="numero">03</span>
+                    <h3>Diosa de los Sueños</h3>
+                    <p>Sueños y pesadillas</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="comercio.html" class="dios comercio">
+                    <span class="numero">04</span>
+                    <h3>Dios del Comercio</h3>
+                    <p>Intercambio y riqueza</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="categoria" id="menores">
+
+            <div class="titulo-categoria">
+                <span>05</span>
+                <h2>DIOSES MENORES</h2>
+            </div>
+
+            <p class="texto-categoria">
+                Divinidades vinculadas a conceptos específicos
+                del mundo mortal.
+            </p>
+
+            <div class="dioses">
+
+                <a href="mensajero.html" class="dios mensajero">
+                    <span class="numero">01</span>
+                    <h3>Dios Mensajero</h3>
+                    <p>Comunicación y pactos</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+                <a href="emisario.html" class="dios emisario">
+                    <span class="numero">02</span>
+                    <h3>Emisaria de la Muerte</h3>
+                    <p>Guía de las almas</p>
+                    <span class="ver-mas">VER HISTORIA →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    <section class="funcion-seccion" id="relaciones" aria-labelledby="titulo-relaciones">
+    <h2 id="titulo-relaciones">ALIANZAS, RIVALIDADES Y PACTOS</h2>
+    <p class="funcion-intro">El esquema reúne solo relaciones nombradas explícitamente en las fichas actuales. Las relaciones aún no descritas no se dan por supuestas.</p>
+    <div class="relacion-conflicto" aria-label="Rivalidad entre el Sol y la Luna"><a href="sol.html">Dios del Sol</a><span>RIVALIDAD · GUERRA</span><a href="luna.html">Diosa de la Luna</a></div>
+    <div class="relaciones-grid">
+        <article class="relacion-grupo"><h3>Aliados del Sol</h3><div class="relacion-enlaces"><a href="vida.html">Dios de la Vida</a><a href="amor.html">Diosa del Amor</a><a href="juego.html">Loco de las Apuestas</a></div></article>
+        <article class="relacion-grupo"><h3>Aliados de la Luna</h3><div class="relacion-enlaces"><a href="muerte.html">Dios de la Muerte</a><a href="sueño.html">Diosa de los Sueños</a><a href="emisario.html">Emisaria de la Muerte</a></div></article>
+        <article class="relacion-grupo">
+        <h3>Tres formas de neutralidad</h3>
+        <p><a href="naturaleza.html">Naturaleza</a> protege el equilibrio y es la única neutral entre los Dioses Mayores. <a href="comercio.html">Comercio</a> negocia con ambos bandos. El <a href="mensajero.html">Mensajero</a> cruza sus fronteras al amparo de la inmunidad diplomática que le concede el Tiempo.</p>
+    </article>
+    <article class="relacion-grupo">
+        <h3>Agente libre</h3>
+        <p>El <a href="caos.html">Dios del Caos</a> favorece a ambos bandos por turnos para prolongar la guerra.</p>
+    </article>
+        <article class="relacion-grupo relacion-grupo-pacto"><h3>Pacto de necromancia</h3><p>El Dios de la Muerte y su Emisaria comparten un pacto secreto relacionado con el Culto de la Luna.</p><div class="relacion-enlaces"><a href="muerte.html">Dios de la Muerte</a><a href="emisario.html">Emisaria de la Muerte</a><a href="leyes.html">Leer las leyes y el pacto</a></div></article>
+    </div>
+</section>
+    </main>
+    <footer class="ark-pie">Arkhe 2026</footer>
+
+
+    <script src="catalogo.js" defer></script>
+    <script src="menu.js" defer></script>
+
+</body>
+</html>
